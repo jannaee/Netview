@@ -1,0 +1,14 @@
+// COLORS
+
+$font-stack:  'Press Start 2P', cursive;
+$white: #fff;
+$black: #000;
+
+
+// TYPOGRAPHY
+
+body {
+  font: 100% $font-stack;
+  color: $white;
+  background-color: $black
+}

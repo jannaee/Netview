@@ -1,0 +1,32 @@
+@import 'theme';
+
+html {
+    box-sizing: border-box; //ensures the width and height will include any padding i create
+    font-size: 100%;
+    // overflow-x: hidden;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+// body {
+//     font-family: ;
+//     color: ;
+// }
+
+
+nav {
+    background-color: yellow;
+}
+
+main {
+    background-color: pink;
+}
+
+article {
+    background-color: red;
+}
