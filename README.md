@@ -43,3 +43,8 @@ If there's anything that's unclear or if you just have a general question, we're
 - PWA?
 - Make it boring
 - Material Design Lite
+
+
+
+### Helpful References
+- IndexedDB https://javascript.info/indexeddb
