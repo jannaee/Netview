@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/checkers.png":[["checkers.5349f2d1.png","images/checkers.png"],"images/checkers.png"],"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./../images/hero-image-pixelated.jpg":[["hero-image-pixelated.161b4101.jpg","images/hero-image-pixelated.jpg"],"images/hero-image-pixelated.jpg"],"./../images/checkers.png":[["checkers.5349f2d1.png","images/checkers.png"],"images/checkers.png"],"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./scss/styles.scss");

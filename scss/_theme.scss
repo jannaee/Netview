@@ -12,10 +12,22 @@ h1 {
     font-size: 3.6rem;
 }
 
-// GENERAL STYLES
-html{
-	padding: 20px;
+// UTILITIES FOR MILIGRAM
+.left-column {
+    padding: 20px;
+    margin: 20px;
+
+    @media screen and (max-width: 850px) {
+        padding: 1rem 3rem;
+    }
+
 }
+
+// GENERAL STYLES
+html {
+    padding: 20px;
+}
+
 body {
     font: 100% $font-stack;
     color: $white;
@@ -43,13 +55,11 @@ header {
     font-size: 1rem;
 
 }
+
 .nes-select {
-	width: 90%;
+    width: 90%;
 }
 
-// .logo {
-
-// }
 
 nav {
     width: 100vw;
@@ -94,6 +104,20 @@ nav {
 }
 
 // SECTION STYLES
+.hero-section {
+    height: 600px;
+    width: 100%;
+    background-image: url("../images/hero-image-pixelated.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: right center;
+
+
+    img {
+        padding: 20px;
+    }
+}
+
 .white-section {
     height: 400px;
     color: $black;
@@ -114,9 +138,7 @@ nav {
     }
 }
 
-// .inspiration {
-// 	width
-// }
+
 // DIVIDERS
 .divider {
     background-image: url("../images/checkers.png");

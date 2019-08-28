@@ -2,6 +2,16 @@ h1 {
   font-size: 3.6rem;
 }
 
+.left-column {
+  padding: 20px;
+  margin: 20px;
+}
+@media screen and (max-width: 850px) {
+  .left-column {
+    padding: 1rem 3rem;
+  }
+}
+
 html {
   padding: 20px;
 }
@@ -69,6 +79,18 @@ nav li a:hover:not(.active) {
 }
 nav .active {
   background-color: #4CAF50;
+}
+
+.hero-section {
+  height: 600px;
+  width: 100%;
+  background-image: url("/hero-image-pixelated.161b4101.jpg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.hero-section img {
+  padding: 20px;
 }
 
 .white-section {
