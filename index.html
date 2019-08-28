@@ -13,27 +13,31 @@
     <!-- Query string at the end of the file allows server to check for new version to avoide caching issues -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
-    <link rel="stylesheet" href="dist/styles.css?cb=1566962704662">
+    <link rel="stylesheet" href="dist/styles.css?cb=1566963650126">
 </head>
 
 <body>
-    <header>
-        <section class="logo">
-            <h1>Netview</h1>
-            <h5>For the casual web visitor of 1985<h5>
-        </section>
-        <!--
-        <section class="">
-            <div>
+    <header class="container">
+        <div class="row">
+            <div class="column column-70">
+                <h1>Netview</h1>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="column column-70">
+                <h5>For the casual web visitor of 1985</h5>
+            </div>
+                        <div class="column column-25">
                 <div class="nes-select is-dark">
-                    <select required="" id="dark_select">
-                        <option value="" disabled="" selected="" hidden="">Select...</option>
+                    <select required id="dark_select">
+                        <option value="" disabled selected hidden>Language</option>
                         <option value="0">English</option>
-                        <option value="1">Nglish Eay</option>
+                        <option value="1">Pig Latin</option>
                     </select>
                 </div>
             </div>
-        </section> -->
+        </div>
     </header>
     <nav>
         <ul>
@@ -47,14 +51,11 @@
     <div class="container">
         <div class="row">
             <div class="column">
-
             </div>
             <div class="column">
-<img src="/dist/images/hero-image-pixelated.jpg">
-
+                <img src="/dist/images/hero-image-pixelated.jpg">
             </div>
         </div>
-
     </div>
     <footer class="footer">Footer</footer>
     <!-- JS Files -->
