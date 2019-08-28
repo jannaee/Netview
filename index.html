@@ -13,26 +13,20 @@
     <!-- Query string at the end of the file allows server to check for new version to avoide caching issues -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
-    <link rel="stylesheet" href="dist/styles.css?cb=1566969844039">
+    <link rel="stylesheet" href="dist/styles.css?cb=1566972827021">
 </head>
+<!-- <body class="container"> -->
 
-<body class="container">
+<body>
     <!-- Header-->
     <header class="row">
-        <div class="column column-60">
-            <h1>Netview</h1>
+        <div class="logo column column-60" >
+            <h1 style="line-height: 0;">Netview</h1>
             <h5>For the casual web visitor of 1985</h5>
         </div>
-        <!--         <div class="column nes-select is-dark">
-            <select required id="dark_select">
-                <option value="" disabled selected hidden>Language</option>
-                <option value="0">English</option>
-                <option value="1">Pig Latin</option>
-            </select>
-        </div>
- -->
-        <div class="column" style="padding-top: 40px;">
-            <label for="default_select" style="color:#fff; font-size: 1rem;">Language</label>
+
+        <div class="column">
+            <label for="default_select" class=" language-select">Languages</label>
             <div class="nes-select">
                 <select required id="default_select">
                     <option value="" disabled selected hidden>Select...</option>
@@ -41,21 +35,7 @@
                 </select>
             </div>
         </div>
-        <!--  <div class="column">
-        <div class="nes-container is-dark with-title">
-            <p class="title">Container.is-dark</p>
-            <label>
-                <input type="checkbox" class="nes-checkbox is-dark" checked />
-                <span>Enable</span>
-            </label>
-            <div>
-                <label>
-                    <input type="checkbox" class="nes-checkbox is-dark" checked />
-                    <span>Dark</span>
-                </label>
-            </div>
-        </div>
-    </div> -->
+
     </header>
     <!-- Navigation -->
     <nav class="row">
@@ -88,9 +68,47 @@
         <article class="row">
             <div class="column column-50">
                 <p>test</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Height</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stephen Curry</td>
+                            <td>27</td>
+                            <td>1,91</td>
+                            <td>Akron, OH</td>
+                        </tr>
+                        <tr>
+                            <td>Klay Thompson</td>
+                            <td>25</td>
+                            <td>2,01</td>
+                            <td>Los Angeles, CA</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Copy
             </div>
             <div class="column column-50">
                 <p>test</p>
+                <div class="column">
+                    <div class="row">
+                        <div class="column color3">
+                            <p>column 1</p>
+                        </div>
+                        <div class="column column-60 color2">
+                            <p>column 2</p>
+                        </div>
+                        <div class="column color1">
+                            <p>column 3</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </article>
     </section>
