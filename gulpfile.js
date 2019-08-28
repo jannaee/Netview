@@ -23,7 +23,8 @@ const browserSync = require('browser-sync').create();
 const files = {
     scssPath: 'app/scss/**/*.scss',
     jsPath: 'app/js/**/*.js',
-    imgPath: 'app/images/**/*.{jpg,png,gif,pdf}'
+    imgPath: 'app/images/**/*.{jpg,png,gif,pdf}',
+    htmlPath: '*.html'
 }
 
 
@@ -36,11 +37,18 @@ function scssTask() {
             [autoprefixer(), cssnano()]
         ))
         .pipe(sourcemaps.write('.'))
-        .pipe(browserSync.stream())//adding in browsersync to the pipe
-        .pipe(dest('dist'));
+
+        .pipe(dest('dist'))
+        .pipe(browserSync.stream()); //adding in browsersync to the pipe, must be added after compilation
 
 };
 
+//HTML task
+function htmlTask() {
+    return src(files.htmlPath)
+        .pipe(browserSync.stream());
+
+}
 
 //JS task
 function jsTask() {
@@ -48,17 +56,22 @@ function jsTask() {
         .pipe(concat('main.min.js')) //add all the js files into one
         .pipe(uglify()) //minify the js files
         .pipe(dest('dist')) //move js files to the dist folder
+        .pipe(browserSync.stream());
+
 }
 
+
+
+
 //Image minification
-function imgTask(){
+function imgTask() {
     return src(files.imgPath)
         .pipe(imagemin())
         .pipe(dest('dist/images'))
 }
 
 // A simple task to reload the page
-function reload() {
+function reloadTask() {
     browserSync.reload();
 }
 //Cachebusting task - this will clear out the cache each time running css
@@ -71,6 +84,10 @@ function cacheBustTask() {
         .pipe(dest('.'))
 }
 
+function reload() {
+    browserSync.reload();
+    done();
+}
 //Watch Task - this will watch for changes and rebuild
 function watchTask() {
     browserSync.init({
@@ -81,21 +98,21 @@ function watchTask() {
         // If you are already serving your website locally using something like apache
         // You can use the proxy setting to proxy that instead
         // proxy: "yourlocal.dev"
+
     });
-    watch([
-        'files.scssPath',
-        'files.jsPath',
-        'files.imgPath'
-        ],
+    watch(
+        [files.scssPath, files.jsPath, files.imgPath, files.htmlPath],//the paths to the files that we want to watch
         //any task you run must be either series or parallael (run simultaneiously)
-        parallel(scssTask, jsTask, imgTask, reload));
+        parallel(scssTask, jsTask, imgTask, htmlTask, reload)
+     );
+    // watch(files.htmlPath, reload);//a seperate watch file along with reload seems to work the best
 }
 
 
 
 //Default task
 exports.default = series( //this function will run all of these tasks one after the other
-    parallel(scssTask, jsTask, imgTask), //first the scssTask and the jsTask
+    parallel(scssTask, jsTask, imgTask, htmlTask), //first the scssTask and the jsTask
     cacheBustTask, //this is next
     watchTask
 );
