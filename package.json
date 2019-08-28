@@ -1,29 +1,15 @@
 {
-  "name": "bulma-gulp",
+  "name": "parcel-netview",
   "version": "1.0.0",
-  "description": "Netview Application",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jannaee Sick",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
-    "browser-sync": "^2.26.7",
-    "cssnano": "^4.1.10",
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^6.1.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2"
-  },
-  "dependencies": {
-    "bulma": "^0.7.5",
-    "bulma-start": "0.0.3",
-    "nes.css": "^2.2.0"
+    "sass": "^1.22.10"
   }
 }
