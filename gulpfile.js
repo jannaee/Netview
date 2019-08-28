@@ -23,7 +23,7 @@ const browserSync = require('browser-sync').create();
 const files = {
     scssPath: 'app/scss/**/*.scss',
     jsPath: 'app/js/**/*.js',
-    imgPath: 'app/images/**/*.{jpg,png,gif,pdf}',
+    // imgPath: 'app/images/**/*.{jpg,png,gif,pdf}',
     htmlPath: '*.html'
 }
 
@@ -63,17 +63,14 @@ function jsTask() {
 
 
 
-//Image minification
-function imgTask() {
-    return src(files.imgPath)
-        .pipe(imagemin())
-        .pipe(dest('dist/images'))
-}
+// //Image minification
+// function imgTask() {
+//     return src(files.imgPath)
+//         .pipe(imagemin())
+//         .pipe(dest('dist/images'))
+// }
 
-// A simple task to reload the page
-function reloadTask() {
-    browserSync.reload();
-}
+
 //Cachebusting task - this will clear out the cache each time running css
 //adding a query to the end of the css file . if the query changes the it will load a new file.
 const cbString = new Date().getTime();
@@ -101,9 +98,9 @@ function watchTask() {
 
     });
     watch(
-        [files.scssPath, files.jsPath, files.imgPath, files.htmlPath],//the paths to the files that we want to watch
+        [files.scssPath, files.jsPath, files.htmlPath],//the paths to the files that we want to watch
         //any task you run must be either series or parallael (run simultaneiously)
-        parallel(scssTask, jsTask, imgTask, htmlTask, reload)
+        parallel(scssTask, jsTask, htmlTask, reload)
      );
     // watch(files.htmlPath, reload);//a seperate watch file along with reload seems to work the best
 }
@@ -112,7 +109,7 @@ function watchTask() {
 
 //Default task
 exports.default = series( //this function will run all of these tasks one after the other
-    parallel(scssTask, jsTask, imgTask, htmlTask), //first the scssTask and the jsTask
+    parallel(scssTask, jsTask, htmlTask), //first the scssTask and the jsTask
     cacheBustTask, //this is next
     watchTask
 );
