@@ -18,6 +18,14 @@ h1 {
     margin: 20px;
 }
 
+.flex-parent-center {
+display:flex;
+}
+
+.flex-item-center {
+text-align: center;
+justify-content: center;
+}
 
 
 // GENERAL STYLES
@@ -160,8 +168,25 @@ footer {
     width: 100vw;
 }
 
+// COMPONENTS
+// MS DOS APP WINDOW
+.ms-dos-window{
+    border: 2px solid $black;
+    display:flex; justify-content: center;
+}
 
+.ms-dos-collapse{
+    border: 2px solid black;
+    display:flex;
+    justify-content: center;
 
+}
+    .ms-icn-collapse {
+        text-align: center;
+    }
+.ms-dos-arrow {
+
+}
 
 // TEST COLORS DELETE AFTER PROD
 .color1 {

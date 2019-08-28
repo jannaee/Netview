@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.22.10"
+  },
+  "dependencies": {
+    "idb": "^4.0.4"
   }
 }

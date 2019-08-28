@@ -7,6 +7,15 @@ h1 {
   margin: 20px;
 }
 
+.flex-parent-center {
+  display: flex;
+}
+
+.flex-item-center {
+  text-align: center;
+  justify-content: center;
+}
+
 body {
   font: 100% "Press Start 2P", cursive;
   color: #fff;
@@ -122,6 +131,22 @@ nav .active {
 
 footer {
   width: 100vw;
+}
+
+.ms-dos-window {
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+}
+
+.ms-dos-collapse {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.ms-icn-collapse {
+  text-align: center;
 }
 
 .color1 {
