@@ -6,11 +6,6 @@ h1 {
   padding: 20px;
   margin: 20px;
 }
-@media screen and (max-width: 850px) {
-  .left-column {
-    padding: 1rem 3rem;
-  }
-}
 
 body {
   font: 100% "Press Start 2P", cursive;
@@ -81,12 +76,18 @@ nav .active {
 }
 
 .hero-section {
-  height: 600px;
+  height: 800px;
   width: 100%;
   background-image: url("/hero-image-pixelated.161b4101.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom right;
+  background-color: #000;
+}
+.hero-section .teaser-content {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
 }
 .hero-section img {
   padding: 20px;
@@ -96,17 +97,21 @@ nav .active {
   height: 400px;
   color: #000;
   background-color: #fff;
+  margin-top: 35px;
 }
 .white-section h5 {
   text-align: center;
   background: white;
-  padding: 15px;
+  padding: 25px 15px 15px 15px;
   border-top: 2px dashed #000;
   border-bottom: 2px dashed #000;
   border-right: none;
   border-left: none;
   text-transform: uppercase;
   font-size: 1.25rem;
+}
+.white-section article {
+  margin-top: 50px;
 }
 
 .divider {
