@@ -1,6 +1,7 @@
 // COLORS
 
-$font-stack:  'Press Start 2P', cursive;
+$font-stack: 'Press Start 2P',
+cursive;
 $white: #fff;
 $black: #000;
 $cyan: #48FCFD;
@@ -10,7 +11,87 @@ $purple: #534CFF;
 // TYPOGRAPHY
 
 body {
-  font: 100% $font-stack;
-  color: $white;
-  background-color: $black
+    font: 100% $font-stack;
+    color: $white;
+    background-color: $black
+}
+
+html {
+    box-sizing: border-box; //ensures the width and height will include any padding i create
+    font-size: 100%;
+    // overflow-x: hidden;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+header {
+    height: 120px;
+    width: 100vw;
+    background-color: $white;
+    color: $black;
+    border: 3px solid $black;
+    padding: 36px 120px;
+}
+
+nav {
+    width: 100vw;
+    height: 50px;
+    background-color: $cyan;
+    color: $black;
+    border-bottom: 3px solid $black;
+    padding-left: 100px;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #111;
+        color: $white;
+    }
+
+    .active {
+        background-color: #4CAF50;
+    }
+}
+
+
+
+
+// FlexBox Styles from CSS Tricks
+.fb-container-inline {
+    display: inline-block;
+    flex-wrap: nowrap;
+}
+
+
+
+.fb-container {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-stretch;
+}
+
+.fb-item {
+    flex-grow: 1;
 }
