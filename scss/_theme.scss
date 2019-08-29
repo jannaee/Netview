@@ -13,31 +13,41 @@ h1 {
 }
 
 // UTILITIES FOR MILIGRAM
-.left-column {
-    padding: 20px;
-    margin: 20px;
-}
-
 .flex-parent-center {
-display:flex;
+    display: flex;
 }
 
 .flex-item-center {
-text-align: center;
-justify-content: center;
+    text-align: center;
+    justify-content: center;
 }
 
+.Section {
+    display: block;
+    padding-bottom: 9rem;
+    padding-top: 9rem;
+}
+.center-column {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 
 // GENERAL STYLES
-html {
-    // padding: 0 20px;
-}
 
+figure {
+    padding: 0;
+    img {
+        object-fit: cover;
+    }
+}
 body {
     font: 100% $font-stack;
     color: $white;
     padding: auto 15%;
     overflow-x: hidden;
+    min-width: 400px;
 }
 
 
@@ -51,7 +61,8 @@ header {
         line-height: 0;
         padding-top: 35px;
     }
-    .logo{
+
+    .logo {
         padding-top: 20px;
     }
 }
@@ -114,29 +125,18 @@ nav {
 
 // SECTION STYLES
 .hero-section {
-    height: 800px;
+    height: auto;
     width: 100%;
-    background-image: url("../images/hero-image-pixelated.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom right;
     background-color: $black;
-    .teaser-content {
-width: 60%;
-margin: 0 auto;
-
-    text-align: center;
-}
-    img {
-        padding: 20px;
-    }
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .white-section {
     height: 400px;
     color: $black;
     background-color: $white;
-    margin-top: 35px;
+
     h5 {
         text-align: center;
         background: white;
@@ -148,6 +148,7 @@ margin: 0 auto;
         text-transform: uppercase;
         font-size: 1.25rem;
     }
+
     article {
         margin-top: 50px;
     }
@@ -170,23 +171,26 @@ footer {
 
 // COMPONENTS
 // MS DOS APP WINDOW
-.ms-dos-window{
+.ms-dos-window {
     border: 2px solid $black;
-    display:flex; justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
-.ms-dos-collapse{
+.ms-dos-collapse {
     border: 2px solid black;
-    display:flex;
+    display: flex;
     justify-content: center;
 
 }
-    .ms-icn-collapse {
-        text-align: center;
-    }
-.ms-dos-arrow {
 
+.ms-icn-collapse {
+    text-align: center;
 }
+
+.ms-dos-arrow {}
+
+.teaser-content {}
 
 // TEST COLORS DELETE AFTER PROD
 .color1 {

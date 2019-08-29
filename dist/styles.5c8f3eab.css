@@ -2,11 +2,6 @@ h1 {
   font-size: 3.6rem;
 }
 
-.left-column {
-  padding: 20px;
-  margin: 20px;
-}
-
 .flex-parent-center {
   display: flex;
 }
@@ -16,11 +11,32 @@ h1 {
   justify-content: center;
 }
 
+.Section {
+  display: block;
+  padding-bottom: 9rem;
+  padding-top: 9rem;
+}
+
+.center-column {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+figure {
+  padding: 0;
+}
+figure img {
+  object-fit: cover;
+}
+
 body {
   font: 100% "Press Start 2P", cursive;
   color: #fff;
   padding: auto 15%;
   overflow-x: hidden;
+  min-width: 400px;
 }
 
 header {
@@ -85,28 +101,17 @@ nav .active {
 }
 
 .hero-section {
-  height: 800px;
+  height: auto;
   width: 100%;
-  background-image: url("/hero-image-pixelated.161b4101.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: bottom right;
   background-color: #000;
-}
-.hero-section .teaser-content {
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
-}
-.hero-section img {
-  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .white-section {
   height: 400px;
   color: #000;
   background-color: #fff;
-  margin-top: 35px;
 }
 .white-section h5 {
   text-align: center;
