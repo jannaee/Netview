@@ -4,6 +4,7 @@ $font-stack: 'Press Start 2P',
 cursive;
 $white: #fff;
 $black: #000;
+$gray: #4CAF50;
 $cyan: #48FCFD;
 $purple: #534CFF;
 
@@ -13,19 +14,16 @@ h1 {
 }
 
 // UTILITIES FOR MILIGRAM
-.flex-parent-center {
-    display: flex;
+.spacer-20 {
+    padding-top: 20px;
 }
 
-.flex-item-center {
-    text-align: center;
-    justify-content: center;
+.spacer-40 {
+    padding-top: 40px;
 }
 
-.Section {
-    display: block;
-    padding-bottom: 4rem;
-    padding-top: 4rem;
+.spacer-60 {
+    padding-top: 60px;
 }
 
 .center-column {
@@ -121,43 +119,86 @@ nav {
     }
 
     .active {
-        background-color: #4CAF50;
+        background-color: $gray;
     }
 }
 
 // SECTION STYLES
-.hero-section {
-    height: auto;
-    width: 100%;
-    background-color: $black;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
 
-.white-section {
-    height: 400px;
-    color: $black;
-    background-color: $white;
+.panel {
+    display: block;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
 
+    // divider headers with double dashes
     h5 {
         text-align: center;
-        background: white;
         padding: 25px 15px 15px 15px;
-        border-top: 2px dashed #000;
-        border-bottom: 2px dashed #000;
         border-right: none;
         border-left: none;
         text-transform: uppercase;
         font-size: 1.25rem;
     }
 
-    // article {
-    //     margin-top: 50px;
-    // }
+    &.black {
+        height: auto;
+        width: 100%;
+        background-color: $black;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+        h5 {
+
+            border-top: 2px dashed #fff;
+            border-bottom: 2px dashed #fff;
+        }
+    }
+
+    &.white {
+        height: 400px;
+        color: $black;
+        background-color: $white;
+
+        // divider headers with double dashes
+        h5 {
+
+            border-top: 2px dashed #000;
+            border-bottom: 2px dashed #000;
+        }
+    }
+
 
 }
 
+
+
+// TABLES
+table {
+    border-collapse: collapse;
+
+}
+
+th {
+    border: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+// color the first row
+tbody tr:first-child td {
+   background: $cyan;
+}
+
+tr {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+}
+
+td {
+    border-bottom: 1px solid black;
+
+}
 
 // DIVIDERS
 .section-title {
