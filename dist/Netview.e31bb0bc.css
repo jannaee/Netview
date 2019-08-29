@@ -13,8 +13,8 @@ h1 {
 
 .Section {
   display: block;
-  padding-bottom: 9rem;
-  padding-top: 9rem;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
 }
 
 .center-column {
@@ -123,8 +123,9 @@ nav .active {
   text-transform: uppercase;
   font-size: 1.25rem;
 }
-.white-section article {
-  margin-top: 50px;
+
+.section-title {
+  padding-bottom: 20px;
 }
 
 .divider {

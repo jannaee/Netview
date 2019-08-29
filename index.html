@@ -27,10 +27,10 @@
                 <h5>For the casual web visitor of 1985.</h5>
             </div>
             <div class="column">
-                <label for="default_select" class="is-dark language-select">Languages</label>
+                <label for="default_select" class="is_dark language-select">Languages</label>
                 <div class="nes-select">
                     <select required id="default_select">
-                        <option value="" disabled selected hidden>Select Language</option>
+                        <option value="" disabled selected hidden>Language</option>
                         <option value="0">To be</option>
                         <option value="1">Not to be</option>
                     </select>
@@ -39,30 +39,31 @@
         </div>
     </header>
     <!-- Navigation -->
-        <nav >
-            <ul class="container">
-                <li> <a href="#">Inspiration</a></li>
-                <li> <a href="#">Gallery</a></li>
-                <li> <a href="#">Episodes</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul class="container">
+            <li> <a href="#">Inspiration</a></li>
+            <li> <a href="#">Gallery</a></li>
+            <li> <a href="#">Episodes</a></li>
+        </ul>
+    </nav>
     <div class="divider"></div>
     <!-- Hero section-->
     <section class="hero-section Section">
         <div class="container">
             <div class="row">
                 <!-- hero supportive content -->
-                <div class="column"> <!--Left Hero Column-->
+                <div class="column">
+                    <!--Left Hero Column-->
                     <section class="teaser-content">
                         <figure><img src="./images/stanger-things_raw.png"></figure>
                         <p><strong>CREATORS:</strong> <br />Ross and Matt Duffer</p>
                         <p><strong>RUN TIME:</strong> <br /> PG 13 1h 56m</p>
-
                         <p><strong>PLOT:</strong> <br /> After the mysterious and sudden vanishing of a young boy, the people of a small town begin to uncover secrets of a government lab, portals to another world, and sinister monsters.</p>
                     </section>
                 </div>
                 <!-- hero image column -->
-                <div class="column column-80"><!--Left Hero Column-->
+                <div class="column column-80">
+                    <!--Left Hero Column-->
                     <figure>
                         <img src="./images/hero-image-pixelated.jpg">
                     </figure>
@@ -70,51 +71,54 @@
             </div>
         </div>
     </section>
-
-
-
-
     <div class="divider"></div>
+
+
+
+
+
     <!-- Inspiration Section -->
+
+
+
     <section class="white-section Section">
-        <h5>Show Inspiration</h5>
+        <h5 class="section-title">Show Inspiration</h5>
         <!-- End of Section Title -->
-        <div class="container">
-            <article class="row">
-                <div class="column column-50">
-                    <p>test</p>
-                    <div class="column" style="border: 2px solid black;display:flex; justify-content: center;">
-                        <div class="row">
-                            <div class="column" style="border: 2px solid black;display:flex; justify-content: center;">
-                                <img src="/images/ms-collapse.svg" style="text-align: center;" alt="MS DOS Collapse Icon">
-                            </div>
-                            <div class="column column-60" style=" border-right: 2px solid black; border-left: 2px solid black;">
-                                <p>column 2</p>
-                            </div>
-                            <div class="column" style="display:flex; justify-content: center;">
-                                <img src="/images/ms-arrow.svg" style="text-align: center;" alt="MS DOS Collapse Icon">
-                            </div>
+    <section class="container"  style="color:black;">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="column">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th><img src="/images/ms-collapse.svg" alt="MS DOS Collapse Icon"></th>
+                                  <th>Notepad - DIDYOUKNOW.TXT</th>
+                                  <th><img src="/images/ms-arrow.svg" alt="MS DOS Collapse Icon"></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td></td>
+                                  <td>Data Goes Heres</td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td>Data Goes Here</td>
+                                  <td></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+
+                        <div class="column">
+
                         </div>
                     </div>
                 </div>
-                <div class="column column-50">
-                    <p>test</p>
-                    <div class="column">
-                        <div class="row">
-                            <div class="column color3">
-                                <p>column 1</p>
-                            </div>
-                            <div class="column column-60 color2">
-                                <p>column 2</p>
-                            </div>
-                            <div class="column color1">
-                                <p>column 3</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </div>
+            </div>
+    </section>
     </section>
     <!-- Footer Section -->
     <footer class="footer">Footer</footer>
