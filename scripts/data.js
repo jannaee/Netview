@@ -1,6 +1,15 @@
 import data from '/data/en_US.json'
 
-console.table(data.heading)
+
+
+(function() {
+
+    var english_data = data;
+    console.log(english_data);
+
+    const heroHeading = document.getElementById('heading').innerHTML = english_data.heading;
+
+})();
 
 // const idb = require('/idb')
 // const eng_data = require("../data/en_US.json")
@@ -45,24 +54,3 @@ console.table(data.heading)
 // //await is needed
 
 // // db.createObjectStore('netflixoriginals', {keyPath, keyOptions});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

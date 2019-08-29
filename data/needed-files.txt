@@ -1,0 +1,27 @@
+"heading" - seriesHeadline
+
+"descripition" - "seriesDescription"
+
+"snippets"- "seriesQuote"
+
+"locations" - "seriesLocations"
+
+"video-embed" - "newsVideo"
+
+"quote" - "quote"
+	"quote.text" - "quoteContent"
+	"quote.author" - "quoteAuthor"
+
+"gallery" - "slideshow"
+	"gallery.src" - "slideshowImage"
+	"galery.text" - "slideshowCaption"
+
+
+"episode-list" - "episode"
+	"season" - "seasonNumber"
+	"name" - "episodeName"
+	"rating" - "episodeRating"
+
+
+What to do with a gallery src that has a reference link?
+	if there is a source link to it, if not then don't

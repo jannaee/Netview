@@ -189,11 +189,197 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/checkers.png":[["checkers.5349f2d1.png","images/checkers.png"],"images/checkers.png"],"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./../images/checkers.png":[["checkers.5349f2d1.png","images/checkers.png"],"images/checkers.png"],"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scss/normalize.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scss/milligram.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scss/nes.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scripts/modal.js":[function(require,module,exports) {
+//From w3school
+// Get the modal
+var modal = document.getElementById("myModal"); // Get the button that opens the modal
+
+var btn = document.getElementById("myBtn"); // Get the <span> element that closes the modal
+
+var span = document.getElementsByClassName("close")[0]; // When the user clicks the button, open the modal
+
+btn.onclick = function () {
+  modal.style.display = "block";
+}; // When the user clicks on <span> (x), close the modal
+
+
+span.onclick = function () {
+  modal.style.display = "none";
+}; // When the user clicks anywhere outside of the modal, close it
+
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+},{}],"data/en_US.json":[function(require,module,exports) {
+module.exports = {
+  "heading": "Stranger Things in RTP",
+  "description": "The Duffer Brothers, born and raised in Durham, drop quite a few Durham-area references in the Emmy-winning hit sci-fi series 'Stranger Things' that they write, direct and produce.",
+  "snippets": ["It's where Cornwallis and Kerley meet. - Hopper", "Described as 'A love letter to the ’80s classics that captivated a generation,' \"Stranger Things\" is set in 1983 in Indiana, \"where a young boy vanishes into thin air. As friends, family and local police search for answers, they are drawn into an extraordinary mystery involving top-secret government experiments, terrifying supernatural forces and one very strange little girl.\"", "Despite the fact that none of the series was filmed in Durham or North Carolina (it was filmed in Georgia), a ton of references to the region are hidden in the show."],
+  "locations": ["Kerley Road, Durham", "Loch Ora", "Eno River", "Forest Hills Park", "Jordan Lake"],
+  "video-embed": "https://www.newsobserver.com/news/local/article182498126.html/video-embed",
+  "quote": {
+    "text": "We have Mirkwood which is, of course, at the intersection of Cornwallis and Kerley, which is really close to where we grew up",
+    "author": "Matt Duffer"
+  },
+  "gallery": [{
+    "src": "https://vignette.wikia.nocookie.net/strangerthings8338/images/6/6b/The_Vanishing_of_Will_Byers_S01-E01_SS_005.png/revision/latest/scale-to-width-down/620",
+    "text": "Intersection of Cornwallis and Kerley"
+  }, {
+    "src": "https://www.newsobserver.com/news/local/rjhbpb/picture182497786/alternates/FREE_768/IMG_DISPLAY-ST_201-202_U_2_1_C9CM2NMI_L350297312",
+    "text": "Trick-or-treating on Loch Nora"
+  }, {
+    "src": "https://nationalpostcom.files.wordpress.com/2017/11/st5.jpg?quality=80&strip=all&w=780&zoom=1",
+    "reference": "https://nationalpost.com/entertainment/television/inside-the-upside-down-the-life-of-will-byers-continues-to-spiral-in-episode-5-of-stranger-things-2",
+    "text": "Drawings on the wall between Eno river and Jordan Lake"
+  }, {
+    "src": "https://vignette.wikia.nocookie.net/strangerthings8338/images/1/1d/ST-Hawkins-Map.png",
+    "text": "Map of Hawkins"
+  }],
+  "episode-list": [{
+    "season": 2,
+    "name": "Chapter Nine: The Gate",
+    "rating": 9.4
+  }, {
+    "season": 2,
+    "name": "Chapter Eight: The Mind Flayer",
+    "rating": 9.3
+  }, {
+    "season": 1,
+    "name": "Chapter Eight: The Upside Down",
+    "rating": 9.3
+  }, {
+    "season": 2,
+    "name": "Chapter Six: The Spy",
+    "rating": 9.2
+  }, {
+    "season": 1,
+    "name": "Chapter Seven: The Bathtub",
+    "rating": 9.1
+  }, {
+    "season": 2,
+    "name": "Chapter Five: Dig Dug",
+    "rating": 8.9
+  }, {
+    "season": 1,
+    "name": "Chapter Three: Holly, Jolly",
+    "rating": 8.9
+  }, {
+    "season": 1,
+    "name": "Chapter Four: The Body",
+    "rating": 8.9
+  }, {
+    "season": 1,
+    "name": "Chapter Six: The Monster",
+    "rating": 8.8
+  }, {
+    "season": 2,
+    "name": "Chapter Four: Will the Wise",
+    "rating": 8.7
+  }, {
+    "season": 2,
+    "name": "Chapter Three: The Pollywog",
+    "rating": 8.7
+  }, {
+    "season": 1,
+    "name": "Chapter Five: The Flea and the Acrobat",
+    "rating": 8.7
+  }, {
+    "season": 1,
+    "name": "Chapter One: The Vanishing of Will Byers",
+    "rating": 8.6
+  }, {
+    "season": 2,
+    "name": "Chapter Two: Trick or Treat, Freak",
+    "rating": 8.5
+  }, {
+    "season": 1,
+    "name": "Chapter Two: The Weirdo on Maple Street",
+    "rating": 8.5
+  }, {
+    "season": 2,
+    "name": "Chapter One: MADMAX",
+    "rating": 8.4
+  }, {
+    "season": 2,
+    "name": "Chapter Seven: The Lost Sister",
+    "rating": 6.1
+  }]
+};
+},{}],"scripts/data.js":[function(require,module,exports) {
+"use strict";
+
+var _en_US = _interopRequireDefault(require("/data/en_US.json"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(function () {
+  var english_data = _en_US.default;
+  console.log(english_data);
+  var heroHeading = document.getElementById('heading').innerHTML = english_data.heading;
+})(); // const idb = require('/idb')
+// const eng_data = require("../data/en_US.json")
+// const openRequest = indexedDB.open('testData', 1);
+// // success (database is ready and database object exist in openRequest.result)
+// openRequest.onsuccess = function() {
+//   let db = openRequest.result;
+//   // continue to work with database using db object
+//  db.onversionchange = function() {
+//     db.close();
+//     console.log("Out of Date Database")
+//     //this will trigger a parallel update in the case a user
+//     //has two browsers open at the same time with differnt versions
+//   };
+// };
+// // error (opening of database fail)
+// openRequest.onerror = function() {
+//   console.error("Error", openRequest.error);
+// };
+// // upgradeneeded (database is ready but version is old)
+// openRequest.onupgradeneeded = function() {
+//   // triggers if the client had no database
+//   // ...perform initialization...
+// };
+// openRequest.onblocked = function() {
+//   //if another connection is still open and the db.close doesn't work or isn't used this will closed
+// };
+// // Now create and object store
+// // Neat things primitive data types can be stored
+// // Note: there needs to be a unique key for every value in the store and this option is asyncrhounous so no
+// //await is needed
+// // db.createObjectStore('netflixoriginals', {keyPath, keyOptions});
+},{"/data/en_US.json":"data/en_US.json"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./scss/styles.scss");
-},{"./scss/styles.scss":"scss/styles.scss"}],"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./scss/normalize.css");
+
+require("./scss/milligram.css");
+
+require("./scss/nes.css");
+
+require("./scripts/modal");
+
+require("./scripts/data");
+},{"./scss/styles.scss":"scss/styles.scss","./scss/normalize.css":"scss/normalize.css","./scss/milligram.css":"scss/milligram.css","./scss/nes.css":"scss/nes.css","./scripts/modal":"scripts/modal.js","./scripts/data":"scripts/data.js"}],"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -221,7 +407,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64215" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61866" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
