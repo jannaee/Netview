@@ -7,6 +7,8 @@ import data from '/data/en_US.json'
     var english_data = data;
     console.log(english_data);
     const heroHeading = document.getElementById('heading').innerHTML = english_data.heading;
+    const seriesdescription = document.getElementById('description').innerHTML = english_data.description;
+    const snippets = document.getElementById('seriesQuote').innerHTML = english_data.snippets[0];
 
 })();
 

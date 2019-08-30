@@ -3949,6 +3949,10 @@ td {
   border-bottom: 1px solid black;
 }
 
+thead {
+  text-align: center;
+}
+
 .section-title {
   padding-bottom: 20px;
 }
@@ -4003,7 +4007,7 @@ footer nav a:hover {
   /* Enable scroll if needed */
   background-color: black;
   /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(72, 252, 253, 0.9);
   /* Black w/ opacity */
 }
 
@@ -4013,40 +4017,9 @@ footer nav a:hover {
   margin: 15% auto;
   /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  border: 3px solid #000;
+  width: 70%;
   /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.ms-dos-window {
-  border: 2px solid #000;
-  display: flex;
-  justify-content: center;
-}
-
-.ms-dos-collapse {
-  border: 2px solid black;
-  display: flex;
-  justify-content: center;
-}
-
-.ms-icn-collapse {
-  text-align: center;
 }
 
 .teaser-content {

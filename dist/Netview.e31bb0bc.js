@@ -334,6 +334,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   var english_data = _en_US.default;
   console.log(english_data);
   var heroHeading = document.getElementById('heading').innerHTML = english_data.heading;
+  var seriesdescription = document.getElementById('description').innerHTML = english_data.description;
+  var snippets = document.getElementById('seriesQuote').innerHTML = english_data.snippets[0];
 })(); // const idb = require('/idb')
 // const eng_data = require("../data/en_US.json")
 // const openRequest = indexedDB.open('testData', 1);
