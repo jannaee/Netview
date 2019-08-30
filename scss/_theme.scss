@@ -315,6 +315,10 @@ footer {
 
 
 //nes overrides
+
+.nes-container.is-dark.with-title > .title {
+    background-color: $black;
+}
 .nes-container.with-title>.title {
 padding: 2rem;
     width: auto;

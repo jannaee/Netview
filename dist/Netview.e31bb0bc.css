@@ -4049,6 +4049,10 @@ footer nav a:hover {
   font-size: 1em;
 }
 
+.nes-container.is-dark.with-title > .title {
+  background-color: #000;
+}
+
 .nes-container.with-title > .title {
   padding: 2rem;
   width: auto;
