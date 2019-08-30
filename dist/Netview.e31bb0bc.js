@@ -323,51 +323,163 @@ module.exports = {
     "rating": 6.1
   }]
 };
+},{}],"data/la_PG.json":[function(require,module,exports) {
+module.exports = {
+  "heading": "angerStray ingsThay inyay RTP",
+  "description": "ethay Duffer othersbray , ornbay andyay aisedray inyay Durham , opdray uiteqay ayay ewfay urham-areaday eferencesray inyay ethay emmy-winningyay ithay i-fiscay eriessay 'angerstray ings'thay atthay eythay itewray , irectday andyay oducepray .",
+  "snippets": ["it'syay erewhay ornwalliscay andyay erleykay eetmay .  - Hopper", "escribedday asyay 'a ovelay etterlay otay ethay ’80s assicsclay atthay aptivatedcay ayay enerationgay , ' \"stranger things\" isyay etsay inyay 1983 inyay indianayay , \"where ayay oungyay oybay anishesvay intoyay inthay airyay . asyay iendsfray , amilyfay andyay ocallay olicepay earchsay orfay answersyay , eythay areyay awndray intoyay anyay extraordinaryyay erymystay involvingyay op-secrettay overnmentgay experimentsyay , errifyingtay upernaturalsay orcesfay andyay oneyay eryvay angestray ittlelay irlgay . \"", "espiteday ethay actfay atthay onenay ofyay ethay eriessay asway ilmedfay inyay Durham oryay orthnay arolinacay (it asway ilmedfay inyay georgia) , ayay ontay ofyay eferencesray otay ethay egionray areyay iddenhay inyay ethay owshay ."],
+  "locations": ["Kerley Road, Durham", "Loch Ora", "Eno River", "Forest Hills Park", "Jordan Lake"],
+  "video-embed": "https://www.newsobserver.com/news/local/article182498126.html/video-embed",
+  "quote": {
+    "text": "eway avehay Mirkwood ichwhay isyay , ofyay oursecay , atyay ethay intersectionyay ofyay ornwalliscay andyay erleykay , ichwhay isyay eallyray oseclay otay erewhay eway ewgray upyay",
+    "author": "Matt Duffer"
+  },
+  "gallery": [{
+    "src": "https://vignette.wikia.nocookie.net/strangerthings8338/images/6/6b/The_Vanishing_of_Will_Byers_S01-E01_SS_005.png/revision/latest/scale-to-width-down/620",
+    "text": "intersectionyay ofyay Cornwallis andyay Kerley"
+  }, {
+    "src": "https://www.newsobserver.com/news/local/rjhbpb/picture182497786/alternates/FREE_768/IMG_DISPLAY-ST_201-202_U_2_1_C9CM2NMI_L350297312",
+    "text": "ick-or-treatingtray onyay Loch Nora"
+  }, {
+    "src": "https://nationalpostcom.files.wordpress.com/2017/11/st5.jpg?quality=80&strip=all&w=780&zoom=1",
+    "reference": "https://nationalpost.com/entertainment/television/inside-the-upside-down-the-life-of-will-byers-continues-to-spiral-in-episode-5-of-stranger-things-2",
+    "text": "awingsdray onyay ethay allway etweenbay Eno iverray andyay Jordan akelay"
+  }, {
+    "src": "https://vignette.wikia.nocookie.net/strangerthings8338/images/1/1d/ST-Hawkins-Map.png",
+    "text": "apmay ofyay Hawkins"
+  }],
+  "episode-list": [{
+    "season": 2,
+    "name": "apterchay nine: ethay ategay",
+    "rating": 9.4
+  }, {
+    "season": 2,
+    "name": "apterchay eight: ethay indmay ayerflay",
+    "rating": 9.3
+  }, {
+    "season": 1,
+    "name": "apterchay eight: ethay upsideyay ownday",
+    "rating": 9.3
+  }, {
+    "season": 2,
+    "name": "apterchay six: ethay yspay",
+    "rating": 9.2
+  }, {
+    "season": 1,
+    "name": "apterchay seven: ethay athtubbay",
+    "rating": 9.1
+  }, {
+    "season": 2,
+    "name": "apterchay five: igday ugday",
+    "rating": 8.9
+  }, {
+    "season": 1,
+    "name": "apterchay three: ollyhay , ollyjay",
+    "rating": 8.9
+  }, {
+    "season": 1,
+    "name": "apterchay four: ethay odybay",
+    "rating": 8.9
+  }, {
+    "season": 1,
+    "name": "apterchay six: ethay onstermay",
+    "rating": 8.8
+  }, {
+    "season": 2,
+    "name": "apterchay four: Will ethay iseway",
+    "rating": 8.7
+  }, {
+    "season": 2,
+    "name": "apterchay three: ethay ollywogpay",
+    "rating": 8.7
+  }, {
+    "season": 1,
+    "name": "apterchay five: ethay eaflay andyay ethay acrobatyay",
+    "rating": 8.7
+  }, {
+    "season": 1,
+    "name": "apterchay one: ethay anishingvay ofyay Will Byers",
+    "rating": 8.6
+  }, {
+    "season": 2,
+    "name": "apterchay two: icktray oryay eattray , eakfray",
+    "rating": 8.5
+  }, {
+    "season": 1,
+    "name": "apterchay two: ethay eirdoway onyay aplemay eetstray",
+    "rating": 8.5
+  }, {
+    "season": 2,
+    "name": "apterchay one: MADMAX",
+    "rating": 8.4
+  }, {
+    "season": 2,
+    "name": "apterchay seven: ethay ostlay istersay",
+    "rating": 6.1
+  }]
+};
 },{}],"scripts/data.js":[function(require,module,exports) {
 "use strict";
 
 var _en_US = _interopRequireDefault(require("/data/en_US.json"));
 
+var _la_PG = _interopRequireDefault(require("/data/la_PG.json"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(function () {
-  var english_data = _en_US.default;
+function startApplicationJSFiles() {
+  var english_data = _en_US.default; //data from english json files
+
+  var pig_data = _la_PG.default;
   console.log(english_data);
   var heroHeading = document.getElementById('heading').innerHTML = english_data.heading;
-  var seriesdescription = document.getElementById('description').innerHTML = english_data.description;
-  var snippets = document.getElementById('seriesQuote').innerHTML = english_data.snippets[0];
-})(); // const idb = require('/idb')
-// const eng_data = require("../data/en_US.json")
-// const openRequest = indexedDB.open('testData', 1);
-// // success (database is ready and database object exist in openRequest.result)
-// openRequest.onsuccess = function() {
-//   let db = openRequest.result;
-//   // continue to work with database using db object
-//  db.onversionchange = function() {
-//     db.close();
-//     console.log("Out of Date Database")
-//     //this will trigger a parallel update in the case a user
-//     //has two browsers open at the same time with differnt versions
-//   };
-// };
-// // error (opening of database fail)
-// openRequest.onerror = function() {
-//   console.error("Error", openRequest.error);
-// };
-// // upgradeneeded (database is ready but version is old)
-// openRequest.onupgradeneeded = function() {
-//   // triggers if the client had no database
-//   // ...perform initialization...
-// };
-// openRequest.onblocked = function() {
-//   //if another connection is still open and the db.close doesn't work or isn't used this will closed
-// };
-// // Now create and object store
-// // Neat things primitive data types can be stored
-// // Note: there needs to be a unique key for every value in the store and this option is asyncrhounous so no
-// //await is needed
-// // db.createObjectStore('netflixoriginals', {keyPath, keyOptions});
-},{"/data/en_US.json":"data/en_US.json"}],"index.js":[function(require,module,exports) {
+  var seriesdescription = document.getElementById('description').innerHTML = english_data.description; // const snippets = document.getElementById('seriesQuote').innerHTML = english_data.snippets[0];
+
+  var snippets = english_data.snippets;
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = snippets[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var el = _step.value;
+      console.log(snippets);
+      break; //closes the iteration
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return != null) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+}
+
+startApplicationJSFiles(); // "heading" - seriesHeadline
+// "descripition" - "seriesDescription"
+// "snippets"- "seriesQuote"
+// "locations" - "seriesLocations"
+// "video-embed" - "newsVideo"
+// "quote" - "quote"
+// 	"quote.text" - "quoteContent"
+// 	"quote.author" - "quoteAuthor"
+// "gallery" - "slideshow"
+// 	"gallery.src" - "slideshowImage"
+// 	"galery.text" - "slideshowCaption"
+// "episode-list" - "episode"
+// 	"season" - "seasonNumber"
+// 	"name" - "episodeName"
+// 	"rating" - "episodeRating"
+// What to do with a gallery src that has a reference link?
+// 	if there is a source link to it, if not then don't
+},{"/data/en_US.json":"data/en_US.json","/data/la_PG.json":"data/la_PG.json"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./scss/normalize.css");
@@ -409,7 +521,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61866" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54528" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

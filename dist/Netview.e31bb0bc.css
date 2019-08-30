@@ -3908,6 +3908,7 @@ nav .active {
 .panel.black {
   height: auto;
   width: 100%;
+  min-height: 200px;
   background-color: #000;
   margin-left: auto;
   margin-right: auto;
@@ -3918,7 +3919,8 @@ nav .active {
   border-bottom: 2px dashed #fff;
 }
 .panel.white {
-  height: 400px;
+  height: 100%;
+  min-height: 200px;
   color: #000;
   background-color: #fff;
 }

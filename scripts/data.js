@@ -1,57 +1,51 @@
-import data from '/data/en_US.json'
+import en_US from '/data/en_US.json';
+import laP_PG from '/data/la_PG.json';
 
-
-
-(function() {
-
-    var english_data = data;
+function startApplicationJSFiles(){
+    const english_data = en_US;//data from english json files
+    const pig_data = laP_PG;
     console.log(english_data);
     const heroHeading = document.getElementById('heading').innerHTML = english_data.heading;
-    const seriesdescription = document.getElementById('description').innerHTML = english_data.description;
-    const snippets = document.getElementById('seriesQuote').innerHTML = english_data.snippets[0];
-
-})();
-
-// const idb = require('/idb')
-// const eng_data = require("../data/en_US.json")
-// const openRequest = indexedDB.open('testData', 1);
+    const seriesdescription = (document.getElementById('description').innerHTML = english_data.description);
+    // const snippets = document.getElementById('seriesQuote').innerHTML = english_data.snippets[0];
+    const snippets = english_data.snippets;
 
 
-// // success (database is ready and database object exist in openRequest.result)
-// openRequest.onsuccess = function() {
-//   let db = openRequest.result;
-//   // continue to work with database using db object
-//  db.onversionchange = function() {
-//     db.close();
-//     console.log("Out of Date Database")
-//     //this will trigger a parallel update in the case a user
-//     //has two browsers open at the same time with differnt versions
-//   };
+ 		for (let el of snippets ){
+			console.log(snippets)
+			  break;//closes the iteration
+ 		}
 
-// };
+}
 
 
-// // error (opening of database fail)
-// openRequest.onerror = function() {
-//   console.error("Error", openRequest.error);
-// };
-
-// // upgradeneeded (database is ready but version is old)
-// openRequest.onupgradeneeded = function() {
-//   // triggers if the client had no database
-//   // ...perform initialization...
-// };
+startApplicationJSFiles();
 
 
-// openRequest.onblocked = function() {
-//   //if another connection is still open and the db.close doesn't work or isn't used this will closed
-// };
+// "heading" - seriesHeadline
+
+// "descripition" - "seriesDescription"
+
+// "snippets"- "seriesQuote"
+
+// "locations" - "seriesLocations"
+
+// "video-embed" - "newsVideo"
+
+// "quote" - "quote"
+// 	"quote.text" - "quoteContent"
+// 	"quote.author" - "quoteAuthor"
+
+// "gallery" - "slideshow"
+// 	"gallery.src" - "slideshowImage"
+// 	"galery.text" - "slideshowCaption"
 
 
+// "episode-list" - "episode"
+// 	"season" - "seasonNumber"
+// 	"name" - "episodeName"
+// 	"rating" - "episodeRating"
 
-// // Now create and object store
-// // Neat things primitive data types can be stored
-// // Note: there needs to be a unique key for every value in the store and this option is asyncrhounous so no
-// //await is needed
 
-// // db.createObjectStore('netflixoriginals', {keyPath, keyOptions});
+// What to do with a gallery src that has a reference link?
+// 	if there is a source link to it, if not then don't
