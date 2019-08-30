@@ -428,38 +428,27 @@ var _la_PG = _interopRequireDefault(require("/data/la_PG.json"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function startApplicationJSFiles() {
-  var english_data = _en_US.default; //data from english json files
+  var english = [_en_US.default]; // Inject data into dom
 
-  var pig_data = _la_PG.default;
-  console.log(english_data);
-  var heroHeading = document.getElementById('heading').innerHTML = english_data.heading;
-  var seriesdescription = document.getElementById('description').innerHTML = english_data.description; // const snippets = document.getElementById('seriesQuote').innerHTML = english_data.snippets[0];
+  var heroHeading = document.getElementById('heading').innerHTML = _en_US.default.heading;
 
-  var snippets = english_data.snippets;
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
+  var seriesdescription = document.getElementById('description').innerHTML = _la_PG.default.description;
 
-  try {
-    for (var _iterator = snippets[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var el = _step.value;
-      console.log(snippets);
-      break; //closes the iteration
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return != null) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
+  var snippets = _en_US.default.snippets; // Functions looping through items
+  // english.forEach(function(data, index) {
+  //     console.log(index);
+  //     console.log(data);
+  // });
+
+  snippets.forEach(function (snippet, index) {
+    console.log(index); // index
+
+    console.log(snippet); // value
+  }); // for (const [index, value] of snippets_eng.entries()) {
+  //     let row_Data = `<p> ${snippets_eng}</p><br />`;
+  //     console.log(row_Data);
+  //     break; //closes the iteration
+  // }
 }
 
 startApplicationJSFiles(); // "heading" - seriesHeadline

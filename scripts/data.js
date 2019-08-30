@@ -1,20 +1,39 @@
-import en_US from '/data/en_US.json';
-import laP_PG from '/data/la_PG.json';
+import englishJson from '/data/en_US.json';
+import pigLatinJson from '/data/la_PG.json';
 
-function startApplicationJSFiles(){
-    const english_data = en_US;//data from english json files
-    const pig_data = laP_PG;
-    console.log(english_data);
-    const heroHeading = document.getElementById('heading').innerHTML = english_data.heading;
-    const seriesdescription = (document.getElementById('description').innerHTML = english_data.description);
-    // const snippets = document.getElementById('seriesQuote').innerHTML = english_data.snippets[0];
-    const snippets = english_data.snippets;
+function startApplicationJSFiles() {
+	let english = [englishJson];
+    // Inject data into dom
+    const heroHeading = document.getElementById('heading').innerHTML = englishJson.heading;
+    const seriesdescription = (document.getElementById('description').innerHTML = pigLatinJson.description);
+    const snippets = englishJson.snippets;
 
 
- 		for (let el of snippets ){
-			console.log(snippets)
-			  break;//closes the iteration
- 		}
+
+
+    // Functions looping through items
+    // english.forEach(function(data, index) {
+    //     console.log(index);
+    //     console.log(data);
+    // });
+
+
+
+snippets.forEach(function (snippet, index) {
+	console.log(index); // index
+	console.log(snippet); // value
+});
+    // for (const [index, value] of snippets_eng.entries()) {
+    //     let row_Data = `<p> ${snippets_eng}</p><br />`;
+    //     console.log(row_Data);
+
+    //     break; //closes the iteration
+
+    // }
+
+
+
+
 
 }
 
