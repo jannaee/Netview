@@ -184,12 +184,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"scss/styles.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./../images/checkers.png":[["checkers.5349f2d1.png","images/checkers.png"],"images/checkers.png"],"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scss/normalize.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"scss/normalize.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -204,7 +199,12 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scripts/modal.js":[function(require,module,exports) {
+},{"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scss/styles.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../images/checkers.png":[["checkers.5349f2d1.png","images/checkers.png"],"images/checkers.png"],"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scripts/modal.js":[function(require,module,exports) {
 //From w3school
 // Get the modal
 var modal = document.getElementById("myModal"); // Get the button that opens the modal
@@ -368,18 +368,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 },{"/data/en_US.json":"data/en_US.json"}],"index.js":[function(require,module,exports) {
 "use strict";
 
-require("./scss/styles.scss");
-
 require("./scss/normalize.css");
 
 require("./scss/milligram.css");
 
 require("./scss/nes.css");
 
+require("./scss/styles.scss");
+
 require("./scripts/modal");
 
 require("./scripts/data");
-},{"./scss/styles.scss":"scss/styles.scss","./scss/normalize.css":"scss/normalize.css","./scss/milligram.css":"scss/milligram.css","./scss/nes.css":"scss/nes.css","./scripts/modal":"scripts/modal.js","./scripts/data":"scripts/data.js"}],"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./scss/normalize.css":"scss/normalize.css","./scss/milligram.css":"scss/milligram.css","./scss/nes.css":"scss/nes.css","./scss/styles.scss":"scss/styles.scss","./scripts/modal":"scripts/modal.js","./scripts/data":"scripts/data.js"}],"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

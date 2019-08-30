@@ -1,10 +1,8 @@
 // CSS imports
-import "./scss/styles.scss";
 import "./scss/normalize.css";
 import "./scss/milligram.css";
 import "./scss/nes.css";
-
-
+import "./scss/styles.scss";
 
 
 // JS imports

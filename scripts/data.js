@@ -6,7 +6,6 @@ import data from '/data/en_US.json'
 
     var english_data = data;
     console.log(english_data);
-
     const heroHeading = document.getElementById('heading').innerHTML = english_data.heading;
 
 })();
