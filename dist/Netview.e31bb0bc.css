@@ -3892,6 +3892,11 @@ nav .active {
   background-color: #4CAF50;
 }
 
+.quotesWindow {
+  padding: 10px 25px 25px 25px;
+  line-height: 1.85;
+}
+
 .panel {
   display: block;
   padding-bottom: 4rem;
@@ -3931,6 +3936,7 @@ nav .active {
 
 table {
   border-collapse: collapse;
+  border-bottom: 1px solid #000;
 }
 
 th {
@@ -3991,6 +3997,12 @@ footer nav a:hover {
   color: #fff;
 }
 
+.gallery-description {
+  text-align: left;
+  line-height: 1.85;
+  padding: 20px;
+}
+
 /* The Modal (background) */
 .modal {
   display: none;
@@ -4024,6 +4036,11 @@ footer nav a:hover {
   /* Could be more or less, depending on screen size */
 }
 
+.window-cta-btn {
+  padding-bottom: 50px;
+  border: 0;
+}
+
 .teaser-content {
   text-align: left;
 }
@@ -4032,16 +4049,16 @@ footer nav a:hover {
   font-size: 1em;
 }
 
-.color1 {
-  background-color: red;
+.nes-container.with-title > .title {
+  padding: 2rem;
+  width: auto;
+  margin-top: -4rem;
+  background-color: #000;
 }
 
-.color2 {
-  background-color: blue;
-}
-
-.color3 {
-  background-color: magenta;
+.nes-container.is-dark {
+  margin: 0;
+  background-color: #000;
 }
 
 /*# sourceMappingURL=/Netview.e31bb0bc.css.map */

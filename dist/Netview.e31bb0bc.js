@@ -209,7 +209,7 @@ module.hot.accept(reloadCSS);
 // Get the modal
 var modal = document.getElementById("myModal"); // Get the button that opens the modal
 
-var btn = document.getElementById("myBtn"); // Get the <span> element that closes the modal
+var btn = document.getElementById("mapButton"); // Get the <span> element that closes the modal
 
 var span = document.getElementsByClassName("close")[0]; // When the user clicks the button, open the modal
 
@@ -441,11 +441,10 @@ function startApplicationJSFiles() {
   // });
 
   snippets.forEach(function (snippet, index) {
-    console.log(index); // index
-
-    console.log(snippet); // value
-  }); // for (const [index, value] of snippets_eng.entries()) {
-  //     let row_Data = `<p> ${snippets_eng}</p><br />`;
+    var windowData = document.getElementById('seriesQuotes').innerHTML = "<p> ".concat(snippet, "</p>");
+    console.log(windowData);
+  }); // for (const [index, value] of snippets.entries()) {
+  //     let row_Data = `<p> ${snippets}</p><br />`;
   //     console.log(row_Data);
   //     break; //closes the iteration
   // }

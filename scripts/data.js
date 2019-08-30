@@ -2,7 +2,7 @@ import englishJson from '/data/en_US.json';
 import pigLatinJson from '/data/la_PG.json';
 
 function startApplicationJSFiles() {
-	let english = [englishJson];
+    let english = [englishJson];
     // Inject data into dom
     const heroHeading = document.getElementById('heading').innerHTML = englishJson.heading;
     const seriesdescription = (document.getElementById('description').innerHTML = pigLatinJson.description);
@@ -19,12 +19,15 @@ function startApplicationJSFiles() {
 
 
 
-snippets.forEach(function (snippet, index) {
-	console.log(index); // index
-	console.log(snippet); // value
-});
-    // for (const [index, value] of snippets_eng.entries()) {
-    //     let row_Data = `<p> ${snippets_eng}</p><br />`;
+    snippets.forEach(
+        function(snippet, index) {
+
+            let windowData = document.getElementById('seriesQuotes').innerHTML = `<p> ${snippet}</p>`;
+            console.log(windowData)
+
+        });
+    // for (const [index, value] of snippets.entries()) {
+    //     let row_Data = `<p> ${snippets}</p><br />`;
     //     console.log(row_Data);
 
     //     break; //closes the iteration
