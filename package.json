@@ -4,15 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node dev-server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jannaee Sick",
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.22.10"
   },
   "dependencies": {
-    "idb": "^4.0.4"
+    "http-proxy": "^1.17.0",
+    "idb": "^4.0.4",
+    "parcel-bundler": "^1.12.3"
   }
 }

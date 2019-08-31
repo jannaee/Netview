@@ -427,9 +427,15 @@ var _la_PG = _interopRequireDefault(require("/data/la_PG.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function startApplicationJSFiles() {
-  var english = [_en_US.default]; // Inject data into dom
+var english = [_en_US.default],
+    pig = [_la_PG.default];
+document.addEventListener('DOMContentLoaded', function (e) {
+  // Files i want to load immediatley
+  startApplicationJSFiles();
+});
 
+function startApplicationJSFiles() {
+  // Inject data into dom
   var heroHeading = document.getElementById('heading').innerHTML = _en_US.default.heading;
 
   var seriesdescription = document.getElementById('description').innerHTML = _la_PG.default.description;
@@ -441,16 +447,13 @@ function startApplicationJSFiles() {
   // });
 
   snippets.forEach(function (snippet, index) {
-    var windowData = document.getElementById('seriesQuotes').innerHTML = "<p> ".concat(snippet, "</p>");
-    console.log(windowData);
+    var windowData = document.getElementById('seriesQuotes').innerHTML = "<p> ".concat(snippet, "</p>"); // console.log(windowData)
   }); // for (const [index, value] of snippets.entries()) {
   //     let row_Data = `<p> ${snippets}</p><br />`;
   //     console.log(row_Data);
   //     break; //closes the iteration
   // }
-}
-
-startApplicationJSFiles(); // "heading" - seriesHeadline
+} // "heading" - seriesHeadline
 // "descripition" - "seriesDescription"
 // "snippets"- "seriesQuote"
 // "locations" - "seriesLocations"
@@ -509,7 +512,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54528" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64592" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

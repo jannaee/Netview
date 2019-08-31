@@ -6,38 +6,55 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netview | Welcome to the future.</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-<!-- <body class="container"> -->
 
 <body>
-    <!-- Header-->
-    <header class="container">
-        <div class="row">
-            <div class="column column-80">
-                <h2 class="logo">Netview</h2>
-                <h5>For the casual web visitor of 1985.</h5>
-            </div>
-            <div class="column">
-                <label for="default_select" class="is_dark language-select">Languages</label>
-                <div class="nes-select">
-                    <select required id="default_select">
-                        <option value="" disabled selected hidden>Language</option>
-                        <option value="0">To be</option>
-                        <option value="1">Not to be</option>
-                    </select>
+    <header style="border: 3px solid black;">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Modal -->
+                <div class="column column-10">
+                    <img src="/images/ms-collapse.svg" alt="MS DOS Collapse Icon">
+                </div>
+                <!-- Web Browser Name -->
+                <div class="column column-60">
+                    <h1 style="text-align: center; background-color: black; color: white; padding: 25px; font-size: 1.5rem; white-space: nowrap; margin:0;">
+                        Netview Web version 1.0
+                    </h1>
+                </div>
+                <!-- Language Select -->
+                <div class="column column-20">
+                    <div class="container">
+                        <div class="row">
+                            <div class="column">
+                                <label for="default_select">Language</label>
+                                <div class="nes-select">
+                                    <select required id="default_select">
+                                        <option value="" disabled selected hidden>Select</option>
+                                        <option value="0">English</option>
+                                        <option value="1">Pig Latin</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
     <!-- Navigation -->
-    <nav>
-        <ul class="container">
-            <li> <a href="#">Inspiration</a></li>
-            <li> <a href="#">Gallery</a></li>
-            <li> <a href="#">Episodes</a></li>
-        </ul>
+    <nav style="white-space: nowrap;">
+        <div class="container">
+            <div class="row">
+                <!-- TO DO: add media query to shrink font for mobile less than 500px -->
+                <ul class="column">
+                    <li> <a href="#inspiration-panel">Inspiration</a></li>
+                    <li> <a href="#gallery-panel">Gallery</a></li>
+                    <li> <a href="#episodes-panel">Episodes</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <div class="divider"></div>
     <!-- Hero section-->
@@ -50,7 +67,7 @@
                     <section class="teaser-content">
                         <figure><img src="./images/stanger-things_raw.png"></figure>
                         <p style="text-align: center;"><strong>- inspired by -</strong></p>
-                        <h3 id="heading"></h3>
+                        <h3 id="heading" class="spacer-40"></h3>
                         <!-- <h3 id="heading">Stranger Things in RTP</h3> -->
                         <p id="description"></p>
                     </section>
@@ -67,7 +84,7 @@
     </section>
     <div class="divider"></div>
     <!-- Inspiration Section -->
-    <section class="panel white">
+    <section id="inspiration-panel" class="panel white">
         <h5>Show Inspiration</h5>
         <!-- End of Section Title -->
         <section class="spacer-40 container">
@@ -169,42 +186,43 @@
     </section>
     <div class="divider"></div>
     <!-- Gallery Section -->
-    <section>
+    <section id="gallery-panel">
         <div class="panel black">
             <h5>GALLERY</h5>
             <div class="container spacer-40">
-                <div class="row">
-                    <div class="nes-container is-dark with-title">
-                        <p class="title">SHOW IMAGES</p>
+                <div class="nes-container is-dark with-title row">
+                    <!-- BEGINNING OF NES CONTAINER -->
+                    <div class="column">
+                        <h3 class="title">SLIDE SHOW</h3>
                         <!-- Left hand column of gallery -->
-                        <div class="gallery-description column column-50">
-                            <p>Ex in. In dolor mollit reprehenderit et consequat excepteur dolore dolore velit dolor enim mollit in culpa labore consectetur occaecat adipisicing laborum magna ut ex esse consectetur esse aliqua exercitation nisi dolore aliqua magna commodo exercitation esse ut magna fugiat.</p>
+                        <p>Ex in. In dolor mollit reprehenderit et consequat excepteur dolore dolore velit dolor enim mollit in culpa labore consectetur occaecat adipisicing laborum magna ut ex esse consectetur esse aliqua exercitation nisi dolore aliqua magna commodo exercitation esse ut magna fugiat.</p>
+                    </div>
+                    <div class="column column-80 slide-show-container">
+                        <div>
+                            <img class="slideshow-gallery-images" src="https://vignette.wikia.nocookie.net/strangerthings8338/images/6/6b/The_Vanishing_of_Will_Byers_S01-E01_SS_005.png/revision/latest/scale-to-width-down/620">
+                            <p>Caption goes here</p>
                         </div>
-                        <!-- Right hand column of gallery -->
-                        <div class="column column-50">
-                            <div class="slider container">
-                                <div class="row">
-                                    <div>
-                                        <!-- This will be using dynamic images -->
-                                        <img src="./images/IMG_DISPLAY-ST_201.jpeg">
-                                    </div>
-
-                                    <div class="slider">
-
-                                    </div>
-
-                                </div>
-
-                            </div>
+                        <div>
+                            <img class="slideshow-gallery-images" src="/images/IMG_DISPLAY-ST_201.jpeg">
+                            <p>Caption goes here2</p>
+                        </div>
+                        <div>
+                            <img class="slideshow-gallery-images" src="/images/IMG_DISPLAY-ST_201.jpeg">
+                            <p>caption goes here3</p>
+                        </div>
+                        <div class="slideshow-slider">
+                            <button onclick="addOne(-1)"><img src="/images/slider-arrow-2.svg"></button>
+                            <button onclick="addOne(+1)"><img src="/images/slider-arrow.svg"></button>
                         </div>
                     </div>
                 </div>
+                <!-- END Of NES Container -->
             </div>
         </div>
     </section>
     <div class="divider"></div>
     <!-- Episodes Section -->
-    <section class="panel white">
+    <section id="episodes-panel" class="panel white">
         <h5>Episodes</h5>
     </section>
     <!-- Footer Section -->

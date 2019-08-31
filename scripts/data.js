@@ -1,8 +1,19 @@
 import englishJson from '/data/en_US.json';
 import pigLatinJson from '/data/la_PG.json';
 
+
+let english = [englishJson],
+    pig = [pigLatinJson];
+
+
+document.addEventListener('DOMContentLoaded', function(e) {
+    // Files i want to load immediatley
+    startApplicationJSFiles();
+
+})
+
+
 function startApplicationJSFiles() {
-    let english = [englishJson];
     // Inject data into dom
     const heroHeading = document.getElementById('heading').innerHTML = englishJson.heading;
     const seriesdescription = (document.getElementById('description').innerHTML = pigLatinJson.description);
@@ -23,7 +34,7 @@ function startApplicationJSFiles() {
         function(snippet, index) {
 
             let windowData = document.getElementById('seriesQuotes').innerHTML = `<p> ${snippet}</p>`;
-            console.log(windowData)
+            // console.log(windowData)
 
         });
     // for (const [index, value] of snippets.entries()) {
@@ -35,13 +46,12 @@ function startApplicationJSFiles() {
     // }
 
 
-
-
-
 }
 
 
-startApplicationJSFiles();
+
+
+
 
 
 // "heading" - seriesHeadline
