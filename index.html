@@ -15,7 +15,35 @@
             <div class="row">
                 <!-- Contact Modal -->
                 <div class="column column-10">
-                    <img src="/images/ms-collapse.svg" alt="MS DOS Collapse Icon">
+                    <!-- Dark dialog -->
+                    <section>
+                        <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-dark').showModal();">
+                            <img src="/images/ms-collapse.svg" alt="MS DOS Collapse Icon">
+                        </button>
+                        <dialog class="nes-dialog" id="dialog-dark">
+                            <div class="container" style="width: 400px;">
+                                <div class="row">
+                                    <div class="column column-40">
+                                        <img src="/images/favicon.png">
+                                    </div>
+                                    <div class="column column-50">
+                                        <p method="dialog" class="title">
+                                            Netview Windows
+                                            Version 1.0
+                                            Designed &mp; Developed by
+                                            Jannaee Sick
+                                        </p>
+                                    </div>
+                                    <form>
+                                        <menu class="dialog-menu">
+                                            <button class="nes-btn">Okay</button>
+                                            <button class="nes-btn is-primary">See Code</button>
+                                        </menu>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+                    </section>
                 </div>
                 <!-- Web Browser Name -->
                 <div class="column column-60">
@@ -65,9 +93,9 @@
                 <div class="column">
                     <!--Left Hero Column-->
                     <section class="teaser-content">
+                        <h5 id="heading" class="spacer-40"></h5>
+                        <p style="text-align: center; padding-bottom: 40px;"><strong>- inspired by -</strong></p>
                         <figure><img src="./images/stanger-things_raw.png"></figure>
-                        <p style="text-align: center;"><strong>- inspired by -</strong></p>
-                        <h3 id="heading" class="spacer-40"></h3>
                         <!-- <h3 id="heading">Stranger Things in RTP</h3> -->
                         <p id="description"></p>
                     </section>
@@ -122,7 +150,7 @@
                                                     <thead>
                                                         <tr>
                                                             <th>
-                                                                <span class="close"><img src="/images/ms-collapse.svg" alt="MS DOS Collapse Icon"></span>
+                                                                <span> <i class="nes-icon close is-small"></i></span>
                                                             </th>
                                                             <th style="background-color: #534CFf;">MAPS - MoviesLocation.TXT</th>
                                                             <th>
@@ -224,6 +252,86 @@
     <!-- Episodes Section -->
     <section id="episodes-panel" class="panel white">
         <h5>Episodes</h5>
+        <!-- SEASON ONE SECTION   TODO: this to be automatically built with JS -->
+        <div class="container spacer-40">
+            <div class="nes-container with-title row">
+                <div class="container">
+                    <h3 class="title">SEASON <span id="seasonNumber">#1</span></h3>
+                    <div class="row">
+                        <div class="column">
+                            <div class="nes-table-responsive">
+                                <table class="nes-table is-bordered is-centered">
+                                    <thead>
+                                        <tr>
+                                            <th>Episode</th>
+                                            <th>Episode Title</th>
+                                            <th>Rating</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Chapter 1</td>
+                                            <td>The Vanishing of Will Byers</td>
+                                            <td id="episodeRating">8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chapter 1</td>
+                                            <td>The Vanishing of Will Byers</td>
+                                            <td id="episodeRating">8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chapter 1</td>
+                                            <td>The Vanishing of Will Byers</td>
+                                            <td id="episodeRating">8</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SEASON TWO SECTION   TODO: this to be automatically built with JS -->
+        <div class="container spacer-40">
+            <div class="nes-container with-title row">
+                <div class="container">
+                    <h3 class="title">SEASON <span id="seasonNumber">#1</span></h3>
+                    <div class="row">
+                        <div class="column">
+                            <div class="nes-table-responsive">
+                                <table class="nes-table is-bordered is-centered">
+                                    <thead>
+                                        <tr>
+                                            <th>Episode</th>
+                                            <th>Episode Title</th>
+                                            <th>Rating</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Chapter 1</td>
+                                            <td>The Vanishing of Will Byers</td>
+                                            <td id="episodeRating">8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chapter 1</td>
+                                            <td>The Vanishing of Will Byers</td>
+                                            <td id="episodeRating">8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chapter 1</td>
+                                            <td>The Vanishing of Will Byers</td>
+                                            <td id="episodeRating">8</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Footer Section -->
     <div class="divider"></div>
