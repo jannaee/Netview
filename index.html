@@ -20,7 +20,6 @@
                         <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-dark').showModal();">
                             <img src="/images/ms-collapse.svg" alt="MS DOS Collapse Icon">
                         </button>
-
                         <!-- Modal content -->
                         <dialog class="nes-dialog" id="dialog-dark">
                             <form method="dialog" style="text-align: center;">
@@ -43,7 +42,7 @@
                 </div>
                 <!-- Language Select -->
                 <div class="column column-30">
-                    <div class="column nes-select" >
+                    <div class="column nes-select">
                         <select style="margin-top: 1px;" required id="default_select">
                             <option value="" disabled selected hidden>Language</option>
                             <option value="0">English</option>
@@ -88,10 +87,8 @@
                         <p id="description"></p>
                     </section>
                 </div>
-
-
-                <div class="column column-70" >
-                 <!--    <figure>
+                <div class="column column-70">
+                    <!--    <figure>
                         <img src="./images/hero-image-pixelated.jpg">
                     </figure> -->
                 </div>
@@ -108,93 +105,43 @@
                 <div class="container">
                     <div class="row">
                         <div class="column">
-                            <table>
+                            <table class="ms-dos-table">
                                 <thead>
                                     <tr>
-                                        <th><img src="/images/ms-collapse.svg" alt="MS DOS Collapse Icon"></th>
-                                        <th style="background-color: #534CFf;">Notepad - DIDYOUKNOW.TXT</th>
-                                        <th><img src="/images/ms-arrow.svg" alt="MS DOS Collapse Icon"></th>
+                                        <th><img src="/images/ms-collapse.svg" alt="MS DOS Collapse Icon" class="collapse-icn"></th>
+                                        <th class="ms-file-title">Notepad - DIDYOUKNOW.TXT</th>
+                                        <th><img src="/images/ms-arrow.svg" alt="MS DOS Collapse Icon" class="down-icn"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td colspan="3">File</td>
+                                        <td colspan="3">
+                                            <div class="dropdown" style="float:left;">
+                                                <button class="dropbtn">Locations</button>
+                                                <div class="dropdown-content" style="left:0;">
+                                                    <ul>
+                                                        <li><a href="#">Kerley Road, Durham</a></li>
+                                                        <li><a href="#">Loch Ora</a></li>
+                                                        <li><a href="#">Eno River</a></li>
+                                                        <li><a href="#">Forest Hills Park</a></li>
+                                                        <li><a href="#">Jordan Lake</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="3" class="window-cta-btn">
+                                        <td colspan="3">
                                             <p class="quotesWindow">DID YOU KNOW? <br />
-                                                Stranger things was largely based on actual locations in Durham North Carolina. Select ‘MAP’ to see where the set inspiration comes from on a map!</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3" class="window-cta-btn">
-                                            <div style="text-align: center;">
-                                                <button id="mapButton" type="button" class="nes-btn">MAP</button>
-                                            </div>
-                                            <!-- The Modal -->
-                                            <div id="myModal" class="modal">
-                                                <!-- Modal content -->
-                                                <table class="modal-content">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>
-                                                                <span> <i class="nes-icon close is-small"></i></span>
-                                                            </th>
-                                                            <th style="background-color: #534CFf;">MAPS - MoviesLocation.TXT</th>
-                                                            <th>
-                                                                <img src="/images/ms-arrow.svg" alt="MS DOS Collapse Icon">
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <!-- map -->
-                                                        <tr>
-                                                            <td colspan="3">
-                                                                <a href="#">File</a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="3">
-                                                                <figure>
-                                                                    <img src="/images/kerley.jpg">
-                                                                </figure>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                                Stranger things was largely based on actual locations in Durham North Carolina. Select from the list above to see where in Durham this location was inspired from.</p>
+                                            <figure>
+                                                <img src="/images/kerley.jpg">
+                                            </figure>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <!-- MAP -->
-                        <div class="column">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th><img src="/images/ms-collapse.svg" alt="MS DOS Collapse Icon"></th>
-                                        <th style="background-color: #534CFf;">Notepad - MoviesQuotes.TXT</th>
-                                        <th><img src="/images/ms-arrow.svg" alt="MS DOS Collapse Icon"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="3">
-                                            <a href="#">File</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3">
-                                            <p id="seriesQuotes" class="quotesWindow">
-                                                <!--snippets from quotes-->
-                                                <p>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- Trigger/Open The Modal -->
                     </div>
                 </div>
             </div>

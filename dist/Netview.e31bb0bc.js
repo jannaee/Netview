@@ -204,31 +204,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/hero-image-pixelated.jpg":[["hero-image-pixelated.161b4101.jpg","images/hero-image-pixelated.jpg"],"images/hero-image-pixelated.jpg"],"./../images/checkers.png":[["checkers.5349f2d1.png","images/checkers.png"],"images/checkers.png"],"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scripts/modal.js":[function(require,module,exports) {
-//From w3school
-// Get the modal
-var modal = document.getElementById("myModal"); // Get the button that opens the modal
-
-var btn = document.getElementById("mapButton"); // Get the <span> element that closes the modal
-
-var span = document.getElementsByClassName("close")[0]; // When the user clicks the button, open the modal
-
-btn.onclick = function () {
-  modal.style.display = "block";
-}; // When the user clicks on <span> (x), close the modal
-
-
-span.onclick = function () {
-  modal.style.display = "none";
-}; // When the user clicks anywhere outside of the modal, close it
-
-
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
-},{}],"data/en_US.json":[function(require,module,exports) {
+},{"./../images/hero-image-pixelated.jpg":[["hero-image-pixelated.161b4101.jpg","images/hero-image-pixelated.jpg"],"images/hero-image-pixelated.jpg"],"./../images/checkers.png":[["checkers.5349f2d1.png","images/checkers.png"],"images/checkers.png"],"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"data/en_US.json":[function(require,module,exports) {
 module.exports = {
   "heading": "Stranger Things in RTP",
   "description": "The Duffer Brothers, born and raised in Durham, drop quite a few Durham-area references in the Emmy-winning hit sci-fi series 'Stranger Things' that they write, direct and produce.",
@@ -481,10 +457,8 @@ require("./scss/nes.css");
 
 require("./scss/styles.scss");
 
-require("./scripts/modal");
-
 require("./scripts/data");
-},{"./scss/normalize.css":"scss/normalize.css","./scss/milligram.css":"scss/milligram.css","./scss/nes.css":"scss/nes.css","./scss/styles.scss":"scss/styles.scss","./scripts/modal":"scripts/modal.js","./scripts/data":"scripts/data.js"}],"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./scss/normalize.css":"scss/normalize.css","./scss/milligram.css":"scss/milligram.css","./scss/nes.css":"scss/nes.css","./scss/styles.scss":"scss/styles.scss","./scripts/data":"scripts/data.js"}],"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

@@ -44,16 +44,16 @@ h1 {
 // }
 
 .bg {
-  /* The image used */
-  background-image: url("../images/hero-image-pixelated.jpg");
+    /* The image used */
+    background-image: url("../images/hero-image-pixelated.jpg");
 
-  /* Full height */
-  height: 100%;
+    /* Full height */
+    height: 100%;
 
-  /* Center and scale the image nicely */
-  background-position: 120px 20%;
-  background-repeat: no-repeat;
-  background-size: cover;
+    /* Center and scale the image nicely */
+    background-position: 120px 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
@@ -197,36 +197,41 @@ nav {
 
 
 // TABLES
-table {
-    border-collapse: collapse;
-    border-bottom: 1px solid $black;
+.ms-dos-table {
 
-}
+    table {
+        border-collapse: collapse;
+        border-bottom: 1px solid $black;
 
-th {
-    border: 1px solid black;
-    border-bottom: 1px solid black;
+    }
 
-}
+    th {
+        border: 1px solid black;
+        border-bottom: 1px solid black;
 
-// color the first row
-tbody tr:first-child td {
-    background: $cyan;
-}
+    }
 
-tr {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
 
-}
+    // color the first row
+    tbody tr:first-child td {
+        background: $cyan;
+    }
 
-td {
-    border-bottom: 1px solid black;
+    tr {
+        border-left: 1px solid black;
+        border-right: 1px solid black;
 
-}
+    }
 
-thead {
-    text-align: center;
+    td {
+        border-bottom: 1px solid black;
+        // padding: 18px;
+
+    }
+
+    thead {
+        text-align: center;
+    }
 }
 
 // DIVIDERS
@@ -274,6 +279,22 @@ footer {
 
 // COMPONENTS
 
+/** MS DOS ITEMS **/
+.collapse-icn {
+    padding-left: 15px;
+}
+
+.down-icn {
+    padding-right: 15px;
+}
+
+.ms-file-title {
+    background-color: #534CFf;
+    color: white;
+    line-height: 1.85
+}
+
+
 // Image Gallery
 
 .gallery-description {
@@ -283,38 +304,6 @@ footer {
 }
 
 
-/* The Modal (background) */
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba($cyan, .9);
-    /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    /* 15% from the top and centered */
-    padding: 20px;
-    border: 3px solid $black;
-    width: 70%;
-    /* Could be more or less, depending on screen size */
-}
 
 .window-cta-btn {
     padding-bottom: 50px;
@@ -330,19 +319,66 @@ footer {
     }
 }
 
+// MS DOS DROP DOWNS NAV
+.dropbtn {
+    background-color: $cyan;
+    border: none;
+    color: $black;
 
-//nes overrides
+    &::first-letter {
+        text-decoration: underline;
+        border-bottom: 3px solid #000;
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style-type: none;
+    }
+
+ .dropdown-content   ul li{
+padding: 20px 20px 0 30px;
+list-style-type: none;
+line-height: 1.8;
+    }
+
+
+.dropdown-content a:hover {
+    background-color: #FF524F;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #FF524F;
+}
+
+// NES OVERRIDES
 
 h3 {
     width: 160px;
     height: 41px;
-    background-color: red;
+    background-color: black;
     position: relative;
     top: -39px;
     white-space: nowrap;
     font-size: 15px;
     padding: 10px;
+    color: $white;
 }
+
 
 .nes-container.with-title>.title {
     padding: 2rem;
@@ -360,4 +396,18 @@ h3 {
 
 .nes-select {
     margin: 5px 0;
+}
+
+figure {
+    margin: 0;
+}
+
+
+// MEDIA QUERIES
+@media only screen and (max-width: 700px) {
+    nav li {
+        font-size: 10px;
+        padding: 0;
+
+    }
 }

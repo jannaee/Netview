@@ -6,5 +6,4 @@ import "./scss/styles.scss";
 
 
 // JS imports
-import "./scripts/modal";
 import "./scripts/data";
