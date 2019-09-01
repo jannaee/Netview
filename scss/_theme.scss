@@ -7,6 +7,7 @@ $black: #000;
 $gray: #4CAF50;
 $cyan: #48FCFD;
 $purple: #534CFF;
+$red: #FF524F;
 
 // FONTS
 h1 {
@@ -131,8 +132,10 @@ nav {
     }
 
     li a:hover:not(.active) {
-        background-color: #111;
+        background-color: $red;
         color: $white;
+text-decoration: none;
+
     }
 
     .active {
@@ -339,22 +342,31 @@ footer {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: $cyan;
+    min-width: 255px;
     z-index: 1;
     list-style-type: none;
-    }
+}
 
- .dropdown-content   ul li{
-padding: 20px 20px 0 30px;
-list-style-type: none;
-line-height: 1.8;
-    }
+.dropdown-content ul li {
+    padding-top: 10px;
+    list-style-type: none;
+    line-height: 1.8;
+    border-bottom: 1px solid $black;
+}
 
+.dropdown-content a {
+    padding: 10px 0;
+    margin: 20px;
+    white-space: nowrap;
+
+
+}
 
 .dropdown-content a:hover {
-    background-color: #FF524F;
+    background-color: $red;
+    text-decoration: none;
+    color: $white;
 }
 
 .dropdown:hover .dropdown-content {
@@ -362,7 +374,7 @@ line-height: 1.8;
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #FF524F;
+    background-color: $red;
 }
 
 // NES OVERRIDES
@@ -398,6 +410,11 @@ h3 {
     margin: 5px 0;
 }
 
+button {
+    background-color:transparent;
+    border: none;
+
+}
 figure {
     margin: 0;
 }
