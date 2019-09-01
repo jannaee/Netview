@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/Netview.e31bb0bc.css"></head>
 
 <body>
-    <header style="border: 3px solid black;">
+    <header>
         <div class="container">
             <div class="row">
                 <!-- Contact Modal -->
@@ -20,56 +20,42 @@
                         <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-dark').showModal();">
                             <img src="/ms-collapse.708ade2e.svg" alt="MS DOS Collapse Icon">
                         </button>
+
+                        <!-- Modal content -->
                         <dialog class="nes-dialog" id="dialog-dark">
-                            <div class="container" style="width: 400px;">
-                                <div class="row">
-                                    <div class="column column-40">
-                                        <img src="/favicon.8003f84c.png">
-                                    </div>
-                                    <div class="column column-50">
-                                        <p method="dialog" class="title">
-                                            Netview Windows
-                                            Version 1.0
-                                            Designed &mp; Developed by
-                                            Jannaee Sick
-                                        </p>
-                                    </div>
-                                    <form>
-                                        <menu class="dialog-menu">
-                                            <button class="nes-btn">Okay</button>
-                                            <button class="nes-btn is-primary">See Code</button>
-                                        </menu>
-                                    </form>
-                                </div>
-                            </div>
+                            <form method="dialog" style="text-align: center;">
+                                <img src="/favicon.8003f84c.png" style="width: 40%;">
+                                <p class="title">Netview Web Browser</p>
+                                <p>Alert: this is a dialog.</p>
+                                <menu class="dialog-menu">
+                                    <button class="nes-btn">Okay</button>
+                                    <button class="nes-btn is-primary">See Code</button>
+                                </menu>
+                            </form>
                         </dialog>
                     </section>
                 </div>
                 <!-- Web Browser Name -->
                 <div class="column column-60">
-                    <h1 style="text-align: center; background-color: black; color: white; padding: 25px; font-size: 1.5rem; white-space: nowrap; margin:0;">
+                    <h1>
                         Netview Web version 1.0
                     </h1>
                 </div>
                 <!-- Language Select -->
-                <div class="column column-20">
-                    <div class="container">
-                        <div class="row">
-                            <div class="column">
-                                <label for="default_select">Language</label>
-                                <div class="nes-select">
-                                    <select required="" id="default_select">
-                                        <option value="" disabled="" selected="" hidden="">Select</option>
-                                        <option value="0">English</option>
-                                        <option value="1">Pig Latin</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                <div class="column column-30">
+                    <div class="column nes-select">
+                        <select style="margin-top: 1px;" required="" id="default_select">
+                            <option value="" disabled="" selected="" hidden="">Language</option>
+                            <option value="0">English</option>
+                            <option value="1">Pig Latin</option>
+                        </select>
                     </div>
                 </div>
+                <!-- End of Header Row -->
             </div>
+            <!-- End of Header Container -->
         </div>
+        <!-- End of Header -->
     </header>
     <!-- Navigation -->
     <nav style="white-space: nowrap;">
@@ -86,26 +72,28 @@
     </nav>
     <div class="divider"></div>
     <!-- Hero section-->
-    <section class="panel black">
+    <section class="panel black bg">
         <div class="container">
             <div class="row">
                 <!-- hero supportive content -->
-                <div class="column">
+                <div class="column column-30" style="background-color: black; opacity: .9;">
                     <!--Left Hero Column-->
                     <section class="teaser-content">
                         <h5 id="heading" class="spacer-40"></h5>
                         <p style="text-align: center; padding-bottom: 40px;"><strong>- inspired by -</strong></p>
-                        <figure><img src="/stanger-things_raw.cc63f369.png"></figure>
+                        <figure style="text-align: center; padding-bottom: 20px;">
+                            <img src="/stanger-things_raw.cc63f369.png">
+                        </figure>
                         <!-- <h3 id="heading">Stranger Things in RTP</h3> -->
                         <p id="description"></p>
                     </section>
                 </div>
-                <!-- hero image column -->
-                <div class="column column-80">
-                    <!--Left Hero Column-->
-                    <figure>
-                        <img src="/hero-image-pixelated.161b4101.jpg">
-                    </figure>
+
+
+                <div class="column column-70">
+                 <!--    <figure>
+                        <img src="./images/hero-image-pixelated.jpg">
+                    </figure> -->
                 </div>
             </div>
         </div>

@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "node dev-server.js"
-  },
   "keywords": [],
   "author": "Jannaee Sick",
   "license": "ISC",

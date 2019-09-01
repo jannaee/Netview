@@ -204,7 +204,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/checkers.png":[["checkers.5349f2d1.png","images/checkers.png"],"images/checkers.png"],"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scripts/modal.js":[function(require,module,exports) {
+},{"./../images/hero-image-pixelated.jpg":[["hero-image-pixelated.161b4101.jpg","images/hero-image-pixelated.jpg"],"images/hero-image-pixelated.jpg"],"./../images/checkers.png":[["checkers.5349f2d1.png","images/checkers.png"],"images/checkers.png"],"_css_loader":"../../../.nvm/versions/node/v8.9.4/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scripts/modal.js":[function(require,module,exports) {
 //From w3school
 // Get the modal
 var modal = document.getElementById("myModal"); // Get the button that opens the modal
@@ -512,7 +512,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62382" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55399" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
