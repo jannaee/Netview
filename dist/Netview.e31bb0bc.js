@@ -403,6 +403,14 @@ var _la_PG = _interopRequireDefault(require("/data/la_PG.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var english = [_en_US.default],
     pig = [_la_PG.default];
 
@@ -420,13 +428,64 @@ var english = [_en_US.default],
 
   var slideshowCaption = _en_US.default.gallery[0].text;
   var slideshowImage = _en_US.default.gallery[0].src;
+  var location = _en_US.default.locations;
 
   function buildGallery() {
     for (var key in _en_US.default.gallery) {
       document.getElementById('galleryimg').innerHTML += "<div class=\"mySlides spacer-40\">\n                    <img src=".concat(_en_US.default.gallery[key].src, "><br />\n                    <p class=\"spacer-40\">").concat(_en_US.default.gallery[key].text, "</p>\n                </div>");
     }
-  }
+  } // function buildMapsDropdown() {
+  //     for (var location in englishJson.locations) {
+  //         console.log(englishJson.locations)
+  //         document.getElementById('seriesLocations').innerHTML +=
+  //         `<ul>
+  //              <li><a href="#">${english.locations[location]}</a></li>
+  //         </ul>
+  //         `
+  //     }
+  // }
 
+
+  function buildMapLocations() {
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+      for (var _iterator = location.entries()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        var _step$value = _slicedToArray(_step.value, 2),
+            index = _step$value[0],
+            value = _step$value[1];
+
+        var seriesLocation = document.getElementById('seriesLocations').innerHTML += "<ul>\n                         <li><a href=\"#\">".concat(value, "</a></li>\n                    </ul>\n                    "); // break;
+      }
+    } catch (err) {
+      _didIteratorError = true;
+      _iteratorError = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion && _iterator.return != null) {
+          _iterator.return();
+        }
+      } finally {
+        if (_didIteratorError) {
+          throw _iteratorError;
+        }
+      }
+    }
+  } // snippets.forEach(
+  //     function(snippet, index) {
+  //         let windowData = document.getElementById('seriesQuotes').innerHTML = `<p> ${snippet}</p>`;
+  //         // console.log(windowData)
+  //     });
+  // for (const [index, value] of snippets.entries()) {
+  //     let row_Data = `<p> ${snippets}</p><br />`;
+  //     console.log(row_Data);
+  //     break; //closes the iteration
+  // }
+
+
+  buildMapLocations();
   buildGallery(); // Functions looping through items
   // english.forEach(function(data, index) {
   //     console.log(index);

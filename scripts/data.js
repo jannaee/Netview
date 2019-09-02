@@ -20,6 +20,8 @@ let english = [englishJson],
     const slideshowCaption = englishJson.gallery[0].text
     const slideshowImage = englishJson.gallery[0].src
 
+    const location = englishJson.locations
+
     function buildGallery() {
         for (var key in englishJson.gallery) {
             document.getElementById('galleryimg').innerHTML +=
@@ -32,7 +34,44 @@ let english = [englishJson],
 
     }
 
-    buildGallery();
+    // function buildMapsDropdown() {
+    //     for (var location in englishJson.locations) {
+    //         console.log(englishJson.locations)
+    //         document.getElementById('seriesLocations').innerHTML +=
+    //         `<ul>
+    //              <li><a href="#">${english.locations[location]}</a></li>
+    //         </ul>
+    //         `
+    //     }
+    // }
+
+        function buildMapLocations(){
+            for (let [index, value] of location.entries()){
+                let seriesLocation = document.getElementById('seriesLocations').innerHTML +=
+                    `<ul>
+                         <li><a href="#">${value}</a></li>
+                    </ul>
+                    `;
+            // break;
+            }
+        }
+    // snippets.forEach(
+    //     function(snippet, index) {
+
+    //         let windowData = document.getElementById('seriesQuotes').innerHTML = `<p> ${snippet}</p>`;
+    //         // console.log(windowData)
+
+    //     });
+    // for (const [index, value] of snippets.entries()) {
+    //     let row_Data = `<p> ${snippets}</p><br />`;
+    //     console.log(row_Data);
+
+    //     break; //closes the iteration
+
+    // }
+
+        buildMapLocations();
+        buildGallery();
     // Functions looping through items
     // english.forEach(function(data, index) {
     //     console.log(index);
