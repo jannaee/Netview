@@ -48,3 +48,8 @@ If there's anything that's unclear or if you just have a general question, we're
 
 ### Helpful References
 - IndexedDB https://javascript.info/indexeddb
+- https://codepen.io/ramonmcros/pen/OVBmXM
+- https://nostalgic-css.github.io/NES.css/
+- html and w3c
+- stackoverflow
+- image gallery - https://stackoverflow.com/questions/22742354/how-create-grid-out-of-images-of-different-sizes

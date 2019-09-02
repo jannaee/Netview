@@ -421,31 +421,83 @@ function startApplicationJSFiles() {
   //     console.log(index);
   //     console.log(data);
   // });
-
-  snippets.forEach(function (snippet, index) {
-    var windowData = document.getElementById('seriesQuotes').innerHTML = "<p> ".concat(snippet, "</p>"); // console.log(windowData)
-  }); // for (const [index, value] of snippets.entries()) {
+  // snippets.forEach(
+  //     function(snippet, index) {
+  //         let windowData = document.getElementById('seriesQuotes').innerHTML = `<p> ${snippet}</p>`;
+  //         // console.log(windowData)
+  //     });
+  // for (const [index, value] of snippets.entries()) {
   //     let row_Data = `<p> ${snippets}</p><br />`;
   //     console.log(row_Data);
   //     break; //closes the iteration
   // }
+}
+/*
+  A pig latin translator taken pretty directly from:
+   https://github.com/jombastic/pig-latin/tree/master/js
+*/
+
+
+function translate(language, words) {
+  if (language == 'en_US') {
+    return words; // assumes english is being passed in //return english data set
+  } else if (language != 'la_PG') {
+    throw "Translation error: Asked to tranlate an unimplemented language =" + language;
+  } else {
+    // Translate into pig latin
+    var result = words.split(/\s|\b/).map(function (word) {
+      //split on anything that has spaces or special characters
+      word = word.toLowerCase();
+      var n = word.search(/[aeiuo]/); //return the poistion of the first vowel
+
+      var ans = "";
+
+      if (n === 0) {
+        //for words that start with a vowel
+        ans = word + "yay";
+      } else if (n === -1) {
+        //does not have a vowel
+        ans = word;
+      } else {
+        //for words that do not start with a vowel and does not have a vowel.
+        ans = word.substr(n) + word.substr(0, 1) + word.substring(1, n) + "ay";
+      } //    console.log("ans="+ans);
+
+
+      return ans;
+    }); // should replace punctuation with a regexp that squeezes out the spaces but this takes care of most of the
+    // ugly ones displayed
+
+    var s = result.join(" ").replace(" ,", ",").replace(" .", ".");
+    return s;
+  }
+}
+
+;
+
+function pigLatin() {
+  //fetch the data that is required
+  var url = "/data/la_PG.json";
+  fetch(url).then(function (data) {
+    return data.json();
+  });
 } // "heading" - seriesHeadline
 // "descripition" - "seriesDescription"
 // "snippets"- "seriesQuote"
 // "locations" - "seriesLocations"
 // "video-embed" - "newsVideo"
 // "quote" - "quote"
-// 	"quote.text" - "quoteContent"
-// 	"quote.author" - "quoteAuthor"
+//     "quote.text" - "quoteContent"
+//     "quote.author" - "quoteAuthor"
 // "gallery" - "slideshow"
-// 	"gallery.src" - "slideshowImage"
-// 	"galery.text" - "slideshowCaption"
+//     "gallery.src" - "slideshowImage"
+//     "galery.text" - "slideshowCaption"
 // "episode-list" - "episode"
-// 	"season" - "seasonNumber"
-// 	"name" - "episodeName"
-// 	"rating" - "episodeRating"
+//     "season" - "seasonNumber"
+//     "name" - "episodeName"
+//     "rating" - "episodeRating"
 // What to do with a gallery src that has a reference link?
-// 	if there is a source link to it, if not then don't
+//     if there is a source link to it, if not then don't
 },{"/data/en_US.json":"data/en_US.json","/data/la_PG.json":"data/la_PG.json"}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -486,7 +538,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55399" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56227" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

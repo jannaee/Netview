@@ -3906,6 +3906,23 @@ nav .active {
   line-height: 1.85;
 }
 
+.quote-wrapper {
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 50px;
+}
+
+blockquote {
+  background: transparent;
+  padding: 20px 30px 20px 30px;
+  max-width: 500px;
+}
+
+.quote-shadow {
+  border: solid 2px;
+  box-shadow: 10px 10px 0 0 #48FCFD;
+}
+
 .panel {
   display: block;
   padding-bottom: 4rem;
