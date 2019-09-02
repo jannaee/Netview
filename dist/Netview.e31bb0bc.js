@@ -405,25 +405,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var english = [_en_US.default],
     pig = [_la_PG.default];
-document.addEventListener('DOMContentLoaded', function (e) {
-  // Files i want to load immediatley
-  startApplicationJSFiles();
-});
 
-function startApplicationJSFiles() {
+(function startApplicationJSFiles() {
   // Inject data into dom
   var heroHeading = document.getElementById('heading').innerHTML = _en_US.default.heading;
 
   var seriesdescription = document.getElementById('description').innerHTML = _la_PG.default.description;
 
-  var snippets = _en_US.default.snippets; // creating the gallery of images
+  var snippets = _en_US.default.snippets;
+
+  var quoteContent = document.getElementById('quoteContent').innerHTML = _en_US.default.quote.text;
+
+  var creator = document.getElementById('quoteAuthor').innerHTML = "- ".concat(_en_US.default.quote.author); // creating the gallery of images
 
   var slideshowCaption = _en_US.default.gallery[0].text;
   var slideshowImage = _en_US.default.gallery[0].src;
 
   function buildGallery() {
     for (var key in _en_US.default.gallery) {
-      document.getElementById('galleryimg').innerHTML += "<div>\n            <img src=".concat(_en_US.default.gallery[key].src, "><br />\n            <p class=\"spacer-40\">").concat(_en_US.default.gallery[key].text, "</p>\n        </div>");
+      document.getElementById('galleryimg').innerHTML += "<div class=\"mySlides spacer-40\">\n                    <img src=".concat(_en_US.default.gallery[key].src, "><br />\n                    <p class=\"spacer-40\">").concat(_en_US.default.gallery[key].text, "</p>\n                </div>");
     }
   }
 
@@ -442,7 +442,25 @@ function startApplicationJSFiles() {
   //     console.log(row_Data);
   //     break; //closes the iteration
   // }
-}
+})(); // TO BE DELETED = Key conversions
+// "heading" - seriesHeadline
+// "descripition" - "seriesDescription"
+// "snippets"- "seriesQuote"
+// "locations" - "seriesLocations"
+// "video-embed" - "newsVideo"
+// "quote" - "quote"
+//     "quote.text" - "quoteContent"
+//     "quote.author" - "quoteAuthor"
+// "gallery" - "slideshow"
+//     "gallery.src" - "slideshowImage"
+//     "galery.text" - "slideshowCaption"
+// "episode-list" - "episode"
+//     "season" - "seasonNumber"
+//     "name" - "episodeName"
+//     "rating" - "episodeRating"
+// What to do with a gallery src that has a reference link?
+//     if there is a source link to it, if not then don't
+
 /*
   A pig latin translator taken pretty directly from:
    https://github.com/jombastic/pig-latin/tree/master/js
@@ -485,41 +503,6 @@ function translate(language, words) {
 }
 
 ;
-
-function done() {
-  console.log('done');
-} // function pigLatin() {
-//     //fetch the data that is required
-//     const url = "./data/la_PG.json";
-//     fetch(url)
-//         .then(function(data) {
-//             console.log(data);
-//             return data.json()
-//         })
-//         .then(
-//             function(res) {
-//                 console.log(res)
-//                 return doneFunc();
-//             })
-// }
-// pigLatin();
-// "heading" - seriesHeadline
-// "descripition" - "seriesDescription"
-// "snippets"- "seriesQuote"
-// "locations" - "seriesLocations"
-// "video-embed" - "newsVideo"
-// "quote" - "quote"
-//     "quote.text" - "quoteContent"
-//     "quote.author" - "quoteAuthor"
-// "gallery" - "slideshow"
-//     "gallery.src" - "slideshowImage"
-//     "galery.text" - "slideshowCaption"
-// "episode-list" - "episode"
-//     "season" - "seasonNumber"
-//     "name" - "episodeName"
-//     "rating" - "episodeRating"
-// What to do with a gallery src that has a reference link?
-//     if there is a source link to it, if not then don't
 },{"/data/en_US.json":"data/en_US.json","/data/la_PG.json":"data/la_PG.json"}],"index.js":[function(require,module,exports) {
 "use strict";
 

@@ -6,19 +6,15 @@ let english = [englishJson],
     pig = [pigLatinJson];
 
 
-document.addEventListener('DOMContentLoaded', function(e) {
-    // Files i want to load immediatley
-    startApplicationJSFiles();
+(function startApplicationJSFiles() {
 
-})
-
-
-function startApplicationJSFiles() {
     // Inject data into dom
     const heroHeading = document.getElementById('heading').innerHTML = englishJson.heading;
     const seriesdescription = (document.getElementById('description').innerHTML = pigLatinJson.description);
-    const snippets = englishJson.snippets;
 
+    const snippets = englishJson.snippets;
+    const quoteContent = document.getElementById('quoteContent').innerHTML = englishJson.quote.text;
+    const creator = document.getElementById('quoteAuthor').innerHTML = `- ${englishJson.quote.author}`;
 
     // creating the gallery of images
     const slideshowCaption = englishJson.gallery[0].text
@@ -27,11 +23,10 @@ function startApplicationJSFiles() {
     function buildGallery() {
         for (var key in englishJson.gallery) {
             document.getElementById('galleryimg').innerHTML +=
-                `<div>
-            <img src=${englishJson.gallery[key].src}><br />
-            <p class="spacer-40">${englishJson.gallery[key].text}</p>
-        </div>`;
-
+                `<div class="mySlides spacer-40">
+                    <img src=${englishJson.gallery[key].src}><br />
+                    <p class="spacer-40">${englishJson.gallery[key].text}</p>
+                </div>`;
         }
 
 
@@ -62,7 +57,39 @@ function startApplicationJSFiles() {
     // }
 
 
-}
+})();
+
+
+
+// TO BE DELETED = Key conversions
+// "heading" - seriesHeadline
+
+// "descripition" - "seriesDescription"
+
+// "snippets"- "seriesQuote"
+
+// "locations" - "seriesLocations"
+
+// "video-embed" - "newsVideo"
+
+// "quote" - "quote"
+//     "quote.text" - "quoteContent"
+//     "quote.author" - "quoteAuthor"
+
+// "gallery" - "slideshow"
+//     "gallery.src" - "slideshowImage"
+//     "galery.text" - "slideshowCaption"
+
+
+// "episode-list" - "episode"
+//     "season" - "seasonNumber"
+//     "name" - "episodeName"
+//     "rating" - "episodeRating"
+
+
+// What to do with a gallery src that has a reference link?
+//     if there is a source link to it, if not then don't
+
 
 
 /*
@@ -97,55 +124,3 @@ function translate(language, words) {
         return s;
     }
 };
-
-
-function done() {
-    console.log('done')
-}
-
-// function pigLatin() {
-//     //fetch the data that is required
-//     const url = "./data/la_PG.json";
-
-//     fetch(url)
-//         .then(function(data) {
-//             console.log(data);
-//             return data.json()
-//         })
-//         .then(
-//             function(res) {
-//                 console.log(res)
-//                 return doneFunc();
-//             })
-
-
-// }
-
-// pigLatin();
-// "heading" - seriesHeadline
-
-// "descripition" - "seriesDescription"
-
-// "snippets"- "seriesQuote"
-
-// "locations" - "seriesLocations"
-
-// "video-embed" - "newsVideo"
-
-// "quote" - "quote"
-//     "quote.text" - "quoteContent"
-//     "quote.author" - "quoteAuthor"
-
-// "gallery" - "slideshow"
-//     "gallery.src" - "slideshowImage"
-//     "galery.text" - "slideshowCaption"
-
-
-// "episode-list" - "episode"
-//     "season" - "seasonNumber"
-//     "name" - "episodeName"
-//     "rating" - "episodeRating"
-
-
-// What to do with a gallery src that has a reference link?
-//     if there is a source link to it, if not then don't
