@@ -156,12 +156,12 @@ nav {
 }
 
 blockquote {
-  background:transparent;
+  background: transparent;
   padding: 20px 30px 20px 30px;
   margin: 50px auto;
   width: 80%;
   max-width: 500px;
-    line-height: 1.8;
+  line-height: 1.8;
 }
 
 
@@ -362,6 +362,7 @@ footer {
 .dropdown {
     position: relative;
     display: inline-block;
+    left:0;
 }
 
 .dropdown-content {
@@ -371,6 +372,8 @@ footer {
     min-width: 255px;
     z-index: 1;
     list-style-type: none;
+        border: 2px solid $black;
+
 }
 
 .dropdown-content ul li {

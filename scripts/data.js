@@ -2,8 +2,8 @@ import englishJson from '/data/en_US.json';
 import pigLatinJson from '/data/la_PG.json';
 
 
-let english = [englishJson],
-    pig = [pigLatinJson];
+// let english = [englishJson],
+//     pig = [pigLatinJson];
 
 
 (function startApplicationJSFiles() {
@@ -19,13 +19,21 @@ let english = [englishJson],
     // creating the gallery of images
     const slideshowCaption = englishJson.gallery[0].text
     const slideshowImage = englishJson.gallery[0].src
+    //  locations
+    const location = englishJson.locations;
+    const seriesSeasonNumbers = englishJson['episode-list'][0].season
 
-    const location = englishJson.locations
+
+    function buildEpisodes(){
+        for (var seriesSeasonNumber in seriesSeasonNumbers){
+            console.log(seriesSeasonNumber)
+        }
+    }
 
     function buildGallery() {
         for (var key in englishJson.gallery) {
             document.getElementById('galleryimg').innerHTML +=
-                `<div class="mySlides spacer-40">
+                `<div class="quote-shadow spacer-40" style="margin: 40px 0;">
                     <img src=${englishJson.gallery[key].src}><br />
                     <p class="spacer-40">${englishJson.gallery[key].text}</p>
                 </div>`;
@@ -55,7 +63,14 @@ let english = [englishJson],
             // break;
             }
         }
-    // snippets.forEach(
+
+
+
+        buildEpisodes();
+        buildMapLocations();
+        buildGallery();
+
+         // snippets.forEach(
     //     function(snippet, index) {
 
     //         let windowData = document.getElementById('seriesQuotes').innerHTML = `<p> ${snippet}</p>`;
@@ -69,9 +84,6 @@ let english = [englishJson],
     //     break; //closes the iteration
 
     // }
-
-        buildMapLocations();
-        buildGallery();
     // Functions looping through items
     // english.forEach(function(data, index) {
     //     console.log(index);

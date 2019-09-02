@@ -4068,6 +4068,7 @@ footer nav a:hover {
 .dropdown {
   position: relative;
   display: inline-block;
+  left: 0;
 }
 
 .dropdown-content {
@@ -4077,6 +4078,7 @@ footer nav a:hover {
   min-width: 255px;
   z-index: 1;
   list-style-type: none;
+  border: 2px solid #000;
 }
 
 .dropdown-content ul li {

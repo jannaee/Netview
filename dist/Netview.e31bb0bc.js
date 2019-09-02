@@ -411,9 +411,8 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var english = [_en_US.default],
-    pig = [_la_PG.default];
-
+// let english = [englishJson],
+//     pig = [pigLatinJson];
 (function startApplicationJSFiles() {
   // Inject data into dom
   var heroHeading = document.getElementById('heading').innerHTML = _en_US.default.heading;
@@ -427,12 +426,20 @@ var english = [_en_US.default],
   var creator = document.getElementById('quoteAuthor').innerHTML = "- ".concat(_en_US.default.quote.author); // creating the gallery of images
 
   var slideshowCaption = _en_US.default.gallery[0].text;
-  var slideshowImage = _en_US.default.gallery[0].src;
+  var slideshowImage = _en_US.default.gallery[0].src; //  locations
+
   var location = _en_US.default.locations;
+  var seriesSeasonNumbers = _en_US.default['episode-list'][0].season;
+
+  function buildEpisodes() {
+    for (var seriesSeasonNumber in seriesSeasonNumbers) {
+      console.log(seriesSeasonNumber);
+    }
+  }
 
   function buildGallery() {
     for (var key in _en_US.default.gallery) {
-      document.getElementById('galleryimg').innerHTML += "<div class=\"mySlides spacer-40\">\n                    <img src=".concat(_en_US.default.gallery[key].src, "><br />\n                    <p class=\"spacer-40\">").concat(_en_US.default.gallery[key].text, "</p>\n                </div>");
+      document.getElementById('galleryimg').innerHTML += "<div class=\"quote-shadow spacer-40\" style=\"margin: 40px 0;\">\n                    <img src=".concat(_en_US.default.gallery[key].src, "><br />\n                    <p class=\"spacer-40\">").concat(_en_US.default.gallery[key].text, "</p>\n                </div>");
     }
   } // function buildMapsDropdown() {
   //     for (var location in englishJson.locations) {
@@ -473,7 +480,11 @@ var english = [_en_US.default],
         }
       }
     }
-  } // snippets.forEach(
+  }
+
+  buildEpisodes();
+  buildMapLocations();
+  buildGallery(); // snippets.forEach(
   //     function(snippet, index) {
   //         let windowData = document.getElementById('seriesQuotes').innerHTML = `<p> ${snippet}</p>`;
   //         // console.log(windowData)
@@ -483,10 +494,7 @@ var english = [_en_US.default],
   //     console.log(row_Data);
   //     break; //closes the iteration
   // }
-
-
-  buildMapLocations();
-  buildGallery(); // Functions looping through items
+  // Functions looping through items
   // english.forEach(function(data, index) {
   //     console.log(index);
   //     console.log(data);
