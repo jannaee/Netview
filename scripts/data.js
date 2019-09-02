@@ -20,8 +20,24 @@ function startApplicationJSFiles() {
     const snippets = englishJson.snippets;
 
 
+    // creating the gallery of images
+    const slideshowCaption = englishJson.gallery[0].text
+    const slideshowImage = englishJson.gallery[0].src
+
+    function buildGallery() {
+        for (var key in englishJson.gallery) {
+            document.getElementById('galleryimg').innerHTML +=
+                `<div>
+            <img src=${englishJson.gallery[key].src}><br />
+            <p class="spacer-40">${englishJson.gallery[key].text}</p>
+        </div>`;
+
+        }
 
 
+    }
+
+    buildGallery();
     // Functions looping through items
     // english.forEach(function(data, index) {
     //     console.log(index);
@@ -63,18 +79,18 @@ function translate(language, words) {
         let result = words.split(/\s|\b/)
             .map(function(word) { //split on anything that has spaces or special characters
                 word = word.toLowerCase();
-                let n = word.search(/[aeiuo]/);//return the poistion of the first vowel
+                let n = word.search(/[aeiuo]/); //return the poistion of the first vowel
                 let ans = ""
                 if (n === 0) { //for words that start with a vowel
                     ans = word + "yay";
-                } else if (n === -1) {//does not have a vowel
+                } else if (n === -1) { //does not have a vowel
                     ans = word;
-                } else {//for words that do not start with a vowel and does not have a vowel.
+                } else { //for words that do not start with a vowel and does not have a vowel.
                     ans = word.substr(n) + word.substr(0, 1) + word.substring(1, n) + "ay";
                 }
                 //    console.log("ans="+ans);
                 return ans;
-        });
+            });
         // should replace punctuation with a regexp that squeezes out the spaces but this takes care of most of the
         // ugly ones displayed
         let s = result.join(" ").replace(" ,", ",").replace(" .", ".")
@@ -83,19 +99,29 @@ function translate(language, words) {
 };
 
 
-
-function pigLatin(){
-//fetch the data that is required
- const url = "/data/la_PG.json";
-
- fetch(url).then(
-     function (data){
-         return data.json()}
-     )
+function done() {
+    console.log('done')
 }
 
+// function pigLatin() {
+//     //fetch the data that is required
+//     const url = "./data/la_PG.json";
+
+//     fetch(url)
+//         .then(function(data) {
+//             console.log(data);
+//             return data.json()
+//         })
+//         .then(
+//             function(res) {
+//                 console.log(res)
+//                 return doneFunc();
+//             })
 
 
+// }
+
+// pigLatin();
 // "heading" - seriesHeadline
 
 // "descripition" - "seriesDescription"

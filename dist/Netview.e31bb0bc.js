@@ -416,7 +416,18 @@ function startApplicationJSFiles() {
 
   var seriesdescription = document.getElementById('description').innerHTML = _la_PG.default.description;
 
-  var snippets = _en_US.default.snippets; // Functions looping through items
+  var snippets = _en_US.default.snippets; // creating the gallery of images
+
+  var slideshowCaption = _en_US.default.gallery[0].text;
+  var slideshowImage = _en_US.default.gallery[0].src;
+
+  function buildGallery() {
+    for (var key in _en_US.default.gallery) {
+      document.getElementById('galleryimg').innerHTML += "<div>\n            <img src=".concat(_en_US.default.gallery[key].src, "><br />\n            <p class=\"spacer-40\">").concat(_en_US.default.gallery[key].text, "</p>\n        </div>");
+    }
+  }
+
+  buildGallery(); // Functions looping through items
   // english.forEach(function(data, index) {
   //     console.log(index);
   //     console.log(data);
@@ -475,13 +486,24 @@ function translate(language, words) {
 
 ;
 
-function pigLatin() {
-  //fetch the data that is required
-  var url = "/data/la_PG.json";
-  fetch(url).then(function (data) {
-    return data.json();
-  });
-} // "heading" - seriesHeadline
+function done() {
+  console.log('done');
+} // function pigLatin() {
+//     //fetch the data that is required
+//     const url = "./data/la_PG.json";
+//     fetch(url)
+//         .then(function(data) {
+//             console.log(data);
+//             return data.json()
+//         })
+//         .then(
+//             function(res) {
+//                 console.log(res)
+//                 return doneFunc();
+//             })
+// }
+// pigLatin();
+// "heading" - seriesHeadline
 // "descripition" - "seriesDescription"
 // "snippets"- "seriesQuote"
 // "locations" - "seriesLocations"
@@ -538,7 +560,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56227" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63260" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
