@@ -67,9 +67,8 @@ async function loadSnippets() {
         response[0].map(
             function(snippet) {
                 snippetsElement.innerHTML += `
-                <div class="slideshow-container">
-                   <q>${snippet}</q>
-                </div>`;
+                   <p>"${snippet}"</p><br />
+                `;
             }
         )
     });
@@ -87,10 +86,8 @@ async function loadImageGallery() {
         response[0].map(
             function(gallery) {
                 galleryElement.innerHTML += `
-                        <div class="quote-shadow spacer-40">
-                                <img src="${gallery.src}">
-                                <p id="quoteAuthor" class="spacer-40">${gallery.text}</p>
-                        </div>
+                      <img class="quote-shadow" src="${gallery.src}">
+                      <p id="quoteAuthor" class="spacer-40">${gallery.text}</p>
                `
             }
         )
@@ -99,12 +96,11 @@ async function loadImageGallery() {
 
 /************* Author/Quote Section ****************/
 async function author() {
-      let quoteUrl = createUrl("http://localhost:3000", "tt4574334", getLanguageSelect(), "$.quote");
-       let quoteResults = fetchAndProcess(quoteUrl).then(response=>{
-         console.log(response[0].author);
-             let quoteAuthor =  document.getElementById('quoteAuthor').innerHTML=`\&mdash; ${response[0].author}`;
-             let quote = document.getElementById('quoteContent').innerHTML = `${response[0].text}`;
-       })
+    let quoteUrl = createUrl("http://localhost:3000", "tt4574334", getLanguageSelect(), "$.quote");
+    let quoteResults = fetchAndProcess(quoteUrl).then(response => {
+        let quoteAuthor = document.getElementById('quoteAuthor').innerHTML = `\&mdash; ${response[0].author}`;
+        let quote = document.getElementById('quoteContent').innerHTML = `${response[0].text}`;
+    })
 
 
 
@@ -112,8 +108,22 @@ async function author() {
 
 /************* Video Section ****************/
 
+// TO DO: Figure out how to get over the CORS issue with localhost http vs https
+async function videoPlayer() {
+    let videoUrl = createUrl("http://localhost:3000", "tt4574334", getLanguageSelect(), "$.videoembed");
+    let videoResults = fetchAndProcess(videoUrl).then(response => {
+        let videoLink = document.getElementById('videoContainer').innerHTML = `
+          <video id="video" controls preload="metadata" poster="images/poster.jpg">
+            <source src="${response[0]}" type="video/mp4">
+          </video>`;
+    })
+}
 
-/************* Video Section ****************/
+
+/************* Call All Functions ****************/
+
+
+/************* Calling All Functions ****************/
 
 async function reloadMovieContent() {
     loadHeading();
@@ -122,6 +132,7 @@ async function reloadMovieContent() {
     loadSnippets();
     loadImageGallery();
     author();
+    videoPlayer();
 
 }
 // Populate the image map into the Did You Know .txt box

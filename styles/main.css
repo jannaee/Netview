@@ -107,7 +107,7 @@ blockquote {
   padding: 20px 30px 20px 30px;
   margin: 50px auto;
   width: 80%;
-  max-width: 500px;
+  max-width: 385px;
   line-height: 1.8;
 }
 .quote-shadow {
@@ -325,7 +325,7 @@ figure {
 
 #slider, ul
 {
-  height: 200px;
+  height: 600px;
 }
 
 #slider
@@ -347,7 +347,7 @@ figure {
   position: relative;
   width: 600px;
   display: inline-block;
-  height: 200px;
+  /*height: 200px;*/
 }
 
 #slider ul
@@ -366,30 +366,7 @@ figure {
   color: #666;
 }
 
-/*** Content ***/
 
-.slider-container
-{
-  margin: 0 auto;
-  padding: 0;
-  width: 550px;
-  min-height: 180px;
-  border-bottom: 1px solid #ccc;
-}
-
-.slider-container h4
-{
-  color: #0A7FAD;
-  text-shadow: -1px 0px 0px rgba(0, 0, 0, 0.50);
-}
-
-.slider-container  p
-{
-  margin: 10px 25px;
-  font-weight: semi-bold;
-  line-height: 150%;
-  text-align: justify;
-}
 
 /*** target hooks ****/
 
@@ -421,14 +398,6 @@ figure {
 {
   -moz-animation-play-state: paused;
   -webkit-animation-play-state: paused;
-}
-
-.new-version {
- position: absolute;
- bottom: 10px;
- border: 1px solid #ccc;
- padding: 10px 15px;
- background-color: #7effca;
 }
 
 
