@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" id="pig" lang="en">
-<!-- If this language is not english it will redirect to the index-pig.html file -->
+<html class="no-js" lang="en">
 
 <head>
     <link rel="shortcut icon" href="favicon.ico" />
@@ -33,7 +32,7 @@
                                 <p>Designed and Developed
                                     <p />
                                     <p>by Jannaee Sick &copy;1985</p>
-                                    <p><a href="https://github.com/jannaee/Netview" target="_blank">See Code</a></p>
+                                    <p><a href="https://github.com/jannaee/Netview-express.git" target="_blank">See Code</a></p>
                                     <button class="nes-btn">close</button>
                             </form>
                         </dialog>
@@ -41,17 +40,14 @@
                 </div>
                 <!-- Web Browser Name -->
                 <div class="column column-60">
-                    <h1>
-                        NETVIEW WEB BROWSER v1.0
-                    </h1>
+                    <h1 id="heroTitle"></h1>
                 </div>
                 <!-- Language Select -->
                 <div class="column column-30">
                     <div class="column nes-select">
-                        <select style="margin-top: 1px;" required id="default_select">
-                            <option value="" disabled selected hidden>Language</option>
-                            <option id="english" value="0">English</option>
-                            <option id="pig-latin" value="1">Pig Latin</option>
+                        <select style="margin-top: 1px;" required id="language_select" onchange="reloadSiteMapLanguage()">
+                            <option id="english" value="en_US" selected>English</option>
+                            <option id="pig-latin" value="la_PG">Pig Latin</option>
                         </select>
                         <!--
                         <select style="margin-top: 1px; display:hidden;" required id="default_select">
@@ -95,9 +91,7 @@
                             <img src="./images/stanger-things_raw.png">
                         </figure>
                         <!-- <h3 id="heading">Stranger Things in RTP</h3> -->
-                        <p id="description" class="lang-eng"></p>
-                        <p id="description" class="lang-pig"></p>
-
+                        <p id="description"></p>
                     </section>
                 </div>
                 <div class="column column-70">
@@ -131,7 +125,8 @@
                                         <td colspan="3">
                                             <div class="dropdown" style="float:left;">
                                                 <button class="dropbtn">Locations</button>
-                                                <div class="dropdown-content" id="seriesLocations">
+                                                <div class="dropdown-content">
+                                                    <ul id="seriesLocations"></ul>
                                                 </div>
                                             </div>
                                         </td>
@@ -251,7 +246,8 @@
         </section>
     </footer>
     <!-- JS Files -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/loadgeneral.js"></script>
+    <script src="scripts/loadmovies.js"></script>
 </body>
 
 </html>
