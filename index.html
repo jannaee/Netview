@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" id="pig" lang="en">
+<!-- If this language is not english it will redirect to the index-pig.html file -->
 
 <head>
     <link rel="shortcut icon" href="favicon.ico" />
@@ -7,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netview | Welcome to the future.</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
+    <link href="scss/main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,10 +30,10 @@
                             <form method="dialog" style="text-align: center; position: relative; top: 10px;">
                                 <img src="/images/favicon.png" style="width: 25%;">
                                 <p class="title">NETVIEW WEB BROWSER</p>
-                                <p>Designed and Developed <p />
-                                <p>by Jannaee Sick &copy;1985</p>
-                                <p><a href="https://github.com/jannaee/Netview" target="_blank">See Code</a></p>
-
+                                <p>Designed and Developed
+                                    <p />
+                                    <p>by Jannaee Sick &copy;1985</p>
+                                    <p><a href="https://github.com/jannaee/Netview" target="_blank">See Code</a></p>
                                     <button class="nes-btn">close</button>
                             </form>
                         </dialog>
@@ -45,9 +50,15 @@
                     <div class="column nes-select">
                         <select style="margin-top: 1px;" required id="default_select">
                             <option value="" disabled selected hidden>Language</option>
-                            <option onclick="langSwitch()" value="0">English</option>
-                            <option value="1">Pig Latin</option>
+                            <option id="english" value="0">English</option>
+                            <option id="pig-latin" value="1">Pig Latin</option>
                         </select>
+                        <!--
+                        <select style="margin-top: 1px; display:hidden;" required id="default_select">
+                            <option value="" disabled selected hidden>Movie</option>
+                            <option onclick="">Title 1</option>
+                            <option onclick="">Title 2</option>
+                        </select> -->
                     </div>
                 </div>
                 <!-- End of Header Row -->
@@ -84,7 +95,9 @@
                             <img src="./images/stanger-things_raw.png">
                         </figure>
                         <!-- <h3 id="heading">Stranger Things in RTP</h3> -->
-                        <p id="description"></p>
+                        <p id="description" class="lang-eng"></p>
+                        <p id="description" class="lang-pig"></p>
+
                     </section>
                 </div>
                 <div class="column column-70">
@@ -119,7 +132,6 @@
                                             <div class="dropdown" style="float:left;">
                                                 <button class="dropbtn">Locations</button>
                                                 <div class="dropdown-content" id="seriesLocations">
-
                                                 </div>
                                             </div>
                                         </td>
@@ -152,16 +164,12 @@
                     <div class="column">
                         <h3 class="title">SLIDE SHOW</h3>
                         <!-- Left hand column of gallery -->
-
                         <div class="quote-wrapper">
-
                             <blockquote>
                                 <q id="quoteContent"></q>
                                 <p id="quoteAuthor"></p>
                             </blockquote>
-
                         </div>
-
                         <section id="galleryimg" class="dynamic-images"></section>
                     </div>
                 </div>
@@ -213,7 +221,6 @@
                 </div>
             </div>
         </div>
-
     </section>
     <!-- Footer Section -->
     <div class="divider"></div>
@@ -244,7 +251,7 @@
         </section>
     </footer>
     <!-- JS Files -->
-    <script src="./index.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

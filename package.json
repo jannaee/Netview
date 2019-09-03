@@ -7,11 +7,15 @@
   "author": "Jannaee Sick",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.5.5",
     "sass": "^1.22.10"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "fetch": "^1.1.0",
     "http-proxy": "^1.17.0",
-    "idb": "^4.0.4",
-    "parcel-bundler": "^1.12.3"
+    "jsonpath": "^1.0.2",
+    "parcel-bundler": "^1.12.3",
+    "scripts": "^0.1.0"
   }
 }

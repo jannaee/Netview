@@ -53,3 +53,5 @@ If there's anything that's unclear or if you just have a general question, we're
 - html and w3c
 - stackoverflow
 - image gallery - https://stackoverflow.com/questions/22742354/how-create-grid-out-of-images-of-different-sizes
+- https://www.nomensa.com/blog/2010/7-tips-for-multi-lingual-website-accessibilitys
+- https://github.com/i18next/i18nextify

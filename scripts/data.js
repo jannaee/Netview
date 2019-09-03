@@ -2,141 +2,69 @@ import englishJson from '/data/en_US.json';
 import pigLatinJson from '/data/la_PG.json';
 
 
-// let english = [englishJson],
-//     pig = [pigLatinJson];
+
+(function startApplicationJSFiles(language) {
+    if (document.documentElement.lang != "en") {//first check to see if data is pig latin or english
+        let language = pigLatinJson; //change the dataset to piglatinjson
+        console.log(language);
+        window.location.href = "./index-pig.html";
+
+    } else if (document.documentElement.lang == "en") {
+        let language = englishJson;
+        console.log(language);
+
+        // Inject data into dom
+        let heroHeading = document.getElementById('heading').innerHTML = language.heading;
+        let seriesdescription = (document.getElementById('description').innerHTML = language.description);
+
+        let snippets = language.snippets;
+        let quoteContent = document.getElementById('quoteContent').innerHTML = language.quote.text;
+        let creator = document.getElementById('quoteAuthor').innerHTML = `- ${language.quote.author}`;
+
+        // creating the gallery of images
+        let slideshowCaption = language.gallery[0].text;
+        let slideshowImage = language.gallery[0].src;
+        //  locations
+        let location = language.locations;
+        let seriesSeasonNumbers = language['episode-list'][0].season;
 
 
-(function startApplicationJSFiles() {
+        // function buildEpisodes() {
+        //     for (let seriesSeasonNumber in seriesSeasonNumbers) {
+        //         console.log(seriesSeasonNumber)
+        //     }
+        // }
 
-    // Inject data into dom
-    const heroHeading = document.getElementById('heading').innerHTML = englishJson.heading;
-    const seriesdescription = (document.getElementById('description').innerHTML = pigLatinJson.description);
-
-    const snippets = englishJson.snippets;
-    const quoteContent = document.getElementById('quoteContent').innerHTML = englishJson.quote.text;
-    const creator = document.getElementById('quoteAuthor').innerHTML = `- ${englishJson.quote.author}`;
-
-    // creating the gallery of images
-    const slideshowCaption = englishJson.gallery[0].text
-    const slideshowImage = englishJson.gallery[0].src
-    //  locations
-    const location = englishJson.locations;
-    const seriesSeasonNumbers = englishJson['episode-list'][0].season
-
-
-    function buildEpisodes(){
-        for (var seriesSeasonNumber in seriesSeasonNumbers){
-            console.log(seriesSeasonNumber)
+        function buildGallery() {
+            for (let key in language.gallery) {
+                document.getElementById('galleryimg').innerHTML +=
+                    `<div class="quote-shadow spacer-40" style="margin: 40px 0;"><img src=${language.gallery[key].src}><br /><p class="spacer-40">${language.gallery[key].text}</p></div>`;
+            }
         }
-    }
 
-    function buildGallery() {
-        for (var key in englishJson.gallery) {
-            document.getElementById('galleryimg').innerHTML +=
-                `<div class="quote-shadow spacer-40" style="margin: 40px 0;">
-                    <img src=${englishJson.gallery[key].src}><br />
-                    <p class="spacer-40">${englishJson.gallery[key].text}</p>
-                </div>`;
-        }
-
-
-    }
-
-    // function buildMapsDropdown() {
-    //     for (var location in englishJson.locations) {
-    //         console.log(englishJson.locations)
-    //         document.getElementById('seriesLocations').innerHTML +=
-    //         `<ul>
-    //              <li><a href="#">${english.locations[location]}</a></li>
-    //         </ul>
-    //         `
-    //     }
-    // }
-
-        function buildMapLocations(){
-            for (let [index, value] of location.entries()){
-                let seriesLocation = document.getElementById('seriesLocations').innerHTML +=
-                    `<ul>
-                         <li><a href="#">${value}</a></li>
-                    </ul>
-                    `;
-            // break;
+        function buildMapLocations() {
+            for (let [index, value] of location.entries()) {
+                let seriesLocation = document.getElementById('seriesLocations').innerHTML += `<ul><li><a href="#">${value}</a></li></ul>`;
+                // break;
             }
         }
 
 
 
-        buildEpisodes();
+        // buildEpisodes();
         buildMapLocations();
         buildGallery();
-
-         // snippets.forEach(
-    //     function(snippet, index) {
-
-    //         let windowData = document.getElementById('seriesQuotes').innerHTML = `<p> ${snippet}</p>`;
-    //         // console.log(windowData)
-
-    //     });
-    // for (const [index, value] of snippets.entries()) {
-    //     let row_Data = `<p> ${snippets}</p><br />`;
-    //     console.log(row_Data);
-
-    //     break; //closes the iteration
-
-    // }
-    // Functions looping through items
-    // english.forEach(function(data, index) {
-    //     console.log(index);
-    //     console.log(data);
-    // });
-
-
-
-    // snippets.forEach(
-    //     function(snippet, index) {
-
-    //         let windowData = document.getElementById('seriesQuotes').innerHTML = `<p> ${snippet}</p>`;
-    //         // console.log(windowData)
-
-    //     });
-    // for (const [index, value] of snippets.entries()) {
-    //     let row_Data = `<p> ${snippets}</p><br />`;
-    //     console.log(row_Data);
-
-    //     break; //closes the iteration
-
-    // }
-
-
+    } else {
+        alert('language is not recognized')
+    }
 })();
 
-
-
-// TO BE DELETED = Key conversions
-// "heading" - seriesHeadline
-
-// "descripition" - "seriesDescription"
-
-// "snippets"- "seriesQuote"
-
-// "locations" - "seriesLocations"
-
-// "video-embed" - "newsVideo"
-
-// "quote" - "quote"
-//     "quote.text" - "quoteContent"
-//     "quote.author" - "quoteAuthor"
-
-// "gallery" - "slideshow"
-//     "gallery.src" - "slideshowImage"
-//     "galery.text" - "slideshowCaption"
-
-
-// "episode-list" - "episode"
-//     "season" - "seasonNumber"
-//     "name" - "episodeName"
-//     "rating" - "episodeRating"
-
+// Language swap
+// Check to see if the body lang=eng
+// if it's not find all html on the page with data type "custom-lang"
+//    and translate with the plug translate
+//    also find all of the items with data type "json-data"
+//    and replace
 
 // What to do with a gallery src that has a reference link?
 //     if there is a source link to it, if not then don't
