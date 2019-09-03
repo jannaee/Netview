@@ -39,7 +39,8 @@ function translate(language, words) {
       });
     // should replace punctuation with a regexp that squeezes out the spaces but this takes care of most of the
     // ugly ones displayed
-    let s = result.join(" ").replace(" ,", ",").replace(" .", ".")
+    let s = result.join(" ").replace(" ,", ",")
+     .replace(" .", ".").replace(". ", ".");
     return s;
   }
 }
@@ -51,19 +52,65 @@ function getLanguageSelect() {
   return selectedLanguage;
 }
 
+async function loadTitle(language, siteMap) {
+  const translatedText = translate(language, siteMap.hero.title);
+  const titleEl = document.getElementById('heroTitle');
+  titleEl.innerHTML = translatedText;
+}
+
+async function loadNavigation(language, siteMap) {
+  const mainNavigationElement = document.getElementById('mainNavigation');
+  mainNavigationElement.innerHTML = "";
+  // console.log("mainNavigationElement" + mainNavigationElement);
+  // console.log("mainNavigationElement" + JSON.stringify(mainNavigationElement));
+  siteMap.hero.mainNavigation.map(
+    function (navText) {
+      mainNavigationElement.innerHTML += `
+               <li id="#${navText.toString()}">
+               	<a href="#${navText.toString().toLowerCase()}-panel">
+${translate(language, navText.toString())}
+</a>
+               </li>`;
+    }
+  );
+  // console.log("mainNavigationElement2" + JSON.stringify(mainNavigationElement));
+
+}
+
 async function reloadSiteMapLanguage() {
   let url = "http://localhost:3000/data/sitemap.json";
   await fetchContent(url).then(response => {
     const language = getLanguageSelect();
-    const translatedText = translate(language, response.hero.title);
-    const titleEl = document.getElementById('heroTitle');
-    console.log("translated=" + translatedText);
-    console.log("titleEl=" + titleEl);
-    titleEl.innerHTML = translatedText;
+    loadTitle(language, response);
+    loadNavigation(language, response);
+// TODO: REFACTOR INTO FUNCTIONS
+	// INSPIRATION
+	const translatedInspirationTitle = translate(language, response.inspiration.title);
+			const inspirationTitle = document.getElementById('inspirationHeader');
+				inspirationTitle.innerHTML = translatedInspirationTitle ;
+
+	const translatedInspirationSubhead = translate(language, response.inspiration.subheading);
+			const inspirationSubhead = document.getElementById('translateSubhead');
+				inspirationSubhead.innerHTML = translatedInspirationSubhead;
+
+	const translateDidYouKnow = translate(language, response.inspiration.description);
+		const inspirationDidYouKnow = document.getElementById('movieFacts');
+				inspirationDidYouKnow.innerHTML = translateDidYouKnow;
+	// GALLERY
+	const translatedGalleryTitle = translate(language, response.gallerypanel.title);
+		const galleryTitle = document.getElementById("galleryHeader");
+				galleryTitle.innerHTML = translatedGalleryTitle;
+	// EPISODES
+	const translatedEpisodesTitle = translate(language, response.episodespanel.title);
+		const episodesTitle = document.getElementById("episodesHeader");
+			episodesTitle.innerHTML = translatedEpisodesTitle;
+
   });
 }
 
 (async function() {
   await reloadSiteMapLanguage();
 
-})().catch(e => {console.log(e);});
+})().catch(e => {console.log(e)});
+
+

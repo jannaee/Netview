@@ -10,7 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css" rel="stylesheet">
     <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
-    <link href="scss/main.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
                 <!-- Language Select -->
                 <div class="column column-30">
                     <div class="column nes-select">
-                        <select style="margin-top: 1px;" required id="language_select" onchange="reloadSiteMapLanguage()">
+                        <select style="margin-top: 1px;" required id="language_select" onchange="reloadSiteMapLanguage(); reloadMovieContent();">
                             <option id="english" value="en_US" selected>English</option>
                             <option id="pig-latin" value="la_PG">Pig Latin</option>
                         </select>
@@ -68,10 +68,12 @@
         <div class="container">
             <div class="row">
                 <!-- TO DO: add media query to shrink font for mobile less than 500px -->
-                <ul class="column">
-                    <li> <a href="#inspiration-panel">Inspiration</a></li>
-                    <li> <a href="#gallery-panel">Gallery</a></li>
-                    <li> <a href="#episodes-panel">Episodes</a></li>
+                <ul id="mainNavigation" class="column">
+                    <!--
+                   <li> <a href="#inspiration-panel">Inspiration</a></li>
+                   <li> <a href="#gallery-panel">Gallery</a></li>
+                   <li> <a href="#episodes-panel">Episodes</a></li>
+-->
                 </ul>
             </div>
         </div>
@@ -105,7 +107,7 @@
     <div class="divider"></div>
     <!-- Inspiration Section -->
     <section id="inspiration-panel" class="panel white">
-        <h5>Show Inspiration</h5>
+        <h5 id="inspirationHeader">Show Inspiration</h5>
         <!-- End of Section Title -->
         <section class="spacer-40 container">
             <div class="row">
@@ -116,7 +118,7 @@
                                 <thead>
                                     <tr>
                                         <th><img src="/images/ms-collapse.svg" alt="MS DOS Collapse Icon" class="collapse-icn"></th>
-                                        <th class="ms-file-title">Notepad - DID_YOU_KNOW.TXT</th>
+                                        <th id="translateSubhead" class="ms-file-title">Notepad - DID_YOU_KNOW.TXT</th>
                                         <th><img src="/images/ms-arrow.svg" alt="MS DOS Collapse Icon" class="down-icn"></th>
                                     </tr>
                                 </thead>
@@ -133,10 +135,10 @@
                                     </tr>
                                     <tr>
                                         <td colspan="3">
-                                            <p class="quotesWindow">DID YOU KNOW? <br />
+                                            <p class="quotesWindow" id="movieFacts">DID YOU KNOW? <br />
                                                 Stranger things was largely based on actual locations in Durham North Carolina. Select from the list above to see where in Durham this location was inspired from.</p>
                                             <figure>
-                                                <img src="/images/kerley.jpg">
+                                                <img src="/images/KerleyRoadDurham.png" id="locationImages">
                                             </figure>
                                         </td>
                                     </tr>
@@ -152,7 +154,7 @@
     <!-- Gallery Section -->
     <section id="gallery-panel">
         <div class="panel black">
-            <h5>GALLERY</h5>
+            <h5 id="galleryHeader">GALLERY</h5>
             <div class="container spacer-40">
                 <div class="nes-container is-dark with-title row">
                     <!-- BEGINNING OF NES CONTAINER -->
@@ -161,11 +163,27 @@
                         <!-- Left hand column of gallery -->
                         <div class="quote-wrapper">
                             <blockquote>
-                                <q id="quoteContent"></q>
-                                <p id="quoteAuthor"></p>
+                                <q id="quoteContent">Uh oh spaghettios, looks like there's no content for you today.</q>
+                                <p id="quoteAuthor">- Chef Boyardee</p>
                             </blockquote>
                         </div>
-                        <section id="galleryimg" class="dynamic-images"></section>
+                        <!-- TO DO: Turn into a rotating gallery -->
+                        <div id="snippetsContent">
+                            <div id="slider">
+                                <ul>
+                                    <li>
+                                    </li>
+                                    <li>
+                                        <div class="slider-container">
+                                            <h4>Pure CSS slider Content</h4>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="galleryimg" class="dynamic-images" display="none" ;>
+                        </div>
                     </div>
                 </div>
                 <!-- END Of NES Container -->
@@ -175,7 +193,7 @@
     <div class="divider"></div>
     <!-- Episodes Section -->
     <section id="episodes-panel" class="panel white">
-        <h5>Episodes</h5>
+        <h5 id="episodesHeader">Episodes</h5>
         <!-- SEASON ONE SECTION   TODO: this to be automatically built with JS -->
         <div class="container spacer-40">
             <div class="nes-container with-title row">
