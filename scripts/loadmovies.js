@@ -112,10 +112,15 @@ async function author() {
 async function videoPlayer() {
     let videoUrl = createUrl("http://localhost:3000", "tt4574334", getLanguageSelect(), "$.videoembed");
     let videoResults = fetchAndProcess(videoUrl).then(response => {
-        let videoLink = document.getElementById('videoContainer').innerHTML = `
-          <video id="video" controls preload="metadata" poster="images/poster.jpg">
-            <source src="${response[0]}" type="video/mp4">
-          </video>`;
+      console.log(response[0]);
+        let videoLink = document.getElementById('videoContainer').innerHTML= `
+
+
+          <button type="button" class="nes-btn is-normal" >
+           <a href="${response[0]}" targe="_blank">Play video</a>
+           </button>
+
+           `;
     })
 }
 
