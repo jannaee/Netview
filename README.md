@@ -12,6 +12,10 @@ The inspiration for this project is based on a few questions... "What if there h
 3. Run `npm start` the app is now listening on port 3000
 4. Navigate to `http://localhost:3000/`
 
+##Special Note:
+This repo is served to a public domain https://netview.netlify.com/ on successful build
+
+
 ##TO DO:
 
 I think of web development much like painting or sculpting. Your work is never really finished. There are a few items that I was not able to complete or add to this project. I will continue to develop this application because it was just way too fun!
