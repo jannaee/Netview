@@ -1,17 +1,19 @@
 {
-  "name": "parcel-netview",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "keywords": [],
-  "author": "Jannaee Sick",
-  "license": "ISC",
-  "devDependencies": {
-    "sass": "^1.22.10"
+  "name": "netviewservice",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
   },
   "dependencies": {
-    "http-proxy": "^1.17.0",
-    "idb": "^4.0.4",
+    "@types/node": "^12.7.4",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "^1.7.3",
+    "jsonpath": "^1.0.2",
+    "morgan": "~1.9.1",
+    "node-fetch": "^2.6.0",
     "parcel-bundler": "^1.12.3"
   }
 }
